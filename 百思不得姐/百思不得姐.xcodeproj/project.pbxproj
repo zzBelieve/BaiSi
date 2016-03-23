@@ -10,7 +10,6 @@
 		079731231CA28970000940CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731221CA28970000940CF /* main.m */; };
 		079731261CA28970000940CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731251CA28970000940CF /* AppDelegate.m */; };
 		079731291CA28970000940CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731281CA28970000940CF /* ViewController.m */; };
-		0797312C1CA28970000940CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797312A1CA28970000940CF /* Main.storyboard */; };
 		0797312E1CA28970000940CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0797312D1CA28970000940CF /* Assets.xcassets */; };
 		079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797312F1CA28970000940CF /* LaunchScreen.storyboard */; };
 		0797313C1CA28970000940CF /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0797313B1CA28970000940CF /* _____Tests.m */; };
@@ -41,7 +40,6 @@
 		079731251CA28970000940CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		079731271CA28970000940CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		079731281CA28970000940CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0797312B1CA28970000940CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0797312D1CA28970000940CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		079731301CA28970000940CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		079731321CA28970000940CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,10 +103,6 @@
 				079731251CA28970000940CF /* AppDelegate.m */,
 				079731271CA28970000940CF /* ViewController.h */,
 				079731281CA28970000940CF /* ViewController.m */,
-				0797312A1CA28970000940CF /* Main.storyboard */,
-				0797312D1CA28970000940CF /* Assets.xcassets */,
-				0797312F1CA28970000940CF /* LaunchScreen.storyboard */,
-				079731321CA28970000940CF /* Info.plist */,
 				079731211CA28970000940CF /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -117,6 +111,9 @@
 		079731211CA28970000940CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0797312D1CA28970000940CF /* Assets.xcassets */,
+				0797312F1CA28970000940CF /* LaunchScreen.storyboard */,
+				079731321CA28970000940CF /* Info.plist */,
 				079731221CA28970000940CF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -245,7 +242,6 @@
 			files = (
 				079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */,
 				0797312E1CA28970000940CF /* Assets.xcassets in Resources */,
-				0797312C1CA28970000940CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +304,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0797312A1CA28970000940CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0797312B1CA28970000940CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0797312F1CA28970000940CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,7 +399,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZZBelieve.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +412,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZZBelieve.-----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
