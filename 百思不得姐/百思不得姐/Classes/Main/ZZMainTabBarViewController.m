@@ -12,16 +12,17 @@
 #import "ZZFriendViewController.h"
 #import "ZZMeViewController.h"
 #import "ZZTabBar.h"
+#import "ZZMainNavgationController.h"
 @interface ZZMainTabBarViewController ()
 
 @end
 
 @implementation ZZMainTabBarViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
++ (void)initialize{
+
+
+
     //设置外观
     
     
@@ -38,6 +39,17 @@
     
     [item setTitleTextAttributes:attr forState:UIControlStateNormal];
     [item setTitleTextAttributes:Selectattr forState:UIControlStateNormal];
+
+
+
+
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+   
     
     
     //添加子控制器
@@ -60,11 +72,17 @@
 
 - (void)addChildVc:(UIViewController *)vc title:(NSString *)title imageName:(NSString *)imageName SelectimageName:(NSString *)SelectimageName{
 
-
+    vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:imageName];
     vc.tabBarItem.selectedImage = [UIImage imageNamed:SelectimageName];
-    [self addChildViewController:vc];
+    
+    
+    ZZMainNavgationController *nac = [[ZZMainNavgationController alloc] initWithRootViewController:vc];
+    
+    
+    
+    [self addChildViewController:nac];
 
 
 }

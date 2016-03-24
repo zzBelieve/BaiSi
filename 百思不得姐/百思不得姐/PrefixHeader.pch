@@ -13,5 +13,18 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "UIView+ZZExtension.h"
+#import "UIBarButtonItem+ZZExtension.h"
+
+#ifdef DEBUG
+#define ZZLog(...) NSLog(__VA_ARGS__);
+
+#else
+
+#define ZZLog(...)
+
+#endif
+
+
+#define ZZLogFunc ZZLog(@"%s", __func__)
 
 #endif /* PrefixHeader_pch */

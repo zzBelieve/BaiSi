@@ -17,6 +17,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    [self creatNav];
+    
+}
+- (void)creatNav{
+    
+    
+    //导航栏
+    
+    // 设置导航栏标题
+    self.navigationItem.title = @"我的";
+    
+    // 设置导航栏右边的按钮
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" selectImage:@"mine-setting-icon-click" target:self action:@selector(settingClick)];
+    
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" selectImage:@"mine-moon-icon-click" target:self action:@selector(moonClick)];
+    
+    self.navigationItem.rightBarButtonItems = @[settingItem, moonItem];
+    
+    
+    
+
+
+}
+- (void)settingClick
+{
+    ZZLogFunc;
+}
+
+- (void)moonClick
+{
+    ZZLogFunc;
 }
 
 - (void)didReceiveMemoryWarning {

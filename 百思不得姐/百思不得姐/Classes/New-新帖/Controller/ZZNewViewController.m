@@ -17,6 +17,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self creatNav];
+    
+}
+- (void)creatNav{
+    
+    
+    //导航栏
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" selectImage:@"MainTagSubIconClick" target:self action:@selector(leftButtonClick)];
+    
+}
+
+- (void)leftButtonClick{
+    
+    
+    ZZLog(@"leftButtonClick");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -11,6 +11,26 @@
 @implementation UIView (ZZExtension)
 
 
+- (void)setZz_size:(CGSize)zz_size{
+
+
+    CGRect frame = self.frame;
+    
+    frame.size = zz_size;
+    
+    self.frame = frame;
+
+
+}
+
+- (CGSize)zz_size{
+    
+    
+    return self.frame.size;
+    
+}
+
+
 - (void)setZz_Width:(CGFloat)zz_Width{
 
     CGRect frame = self.frame;

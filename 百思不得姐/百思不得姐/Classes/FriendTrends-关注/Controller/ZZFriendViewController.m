@@ -1,22 +1,45 @@
 //
-//  ZZEssenceViewController.m
+//  ZZFriendViewController.m
 //  百思不得姐
 //
 //  Created by ZZBelieve on 16/3/24.
 //  Copyright © 2016年 ZZBelieve. All rights reserved.
 //
 
-#import "ZZEssenceViewController.h"
+#import "ZZFriendViewController.h"
 
-@interface ZZEssenceViewController ()
+@interface ZZFriendViewController ()
 
 @end
 
-@implementation ZZEssenceViewController
+@implementation ZZFriendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    [self creatNav];
+    
+}
+- (void)creatNav{
+    
+    
+    //导航栏
+    
+    // 设置导航栏标题
+    self.navigationItem.title = @"我的关注";
+    
+    
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" selectImage:@"friendsRecommentIcon-click" target:self action:@selector(leftButtonClick)];
+ 
+}
+
+- (void)leftButtonClick{
+    
+    
+    ZZLog(@"leftButtonClick");
 }
 
 - (void)didReceiveMemoryWarning {

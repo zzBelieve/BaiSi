@@ -16,4 +16,7 @@
 @property(nonatomic,assign)CGFloat zz_X;
 @property(nonatomic,assign)CGFloat zz_Y;
 
+
+@property(nonatomic,assign)CGSize zz_size;
+
 @end

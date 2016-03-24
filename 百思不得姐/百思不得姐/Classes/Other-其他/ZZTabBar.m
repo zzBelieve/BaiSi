@@ -28,11 +28,14 @@
     if (self = [super initWithFrame:frame]) {
         
         
+        [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+        
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
+        
         
         
         self.publishButton = publishButton;
@@ -55,10 +58,10 @@
     
     [super layoutSubviews];
     
+  
     //发布按钮frame
     self.publishButton.zz_Width = self.publishButton.currentBackgroundImage.size.width;
     self.publishButton.zz_Height = self.publishButton.currentBackgroundImage.size.height;
-    
     self.publishButton.center = CGPointMake(self.zz_Width * 0.5, self.zz_Height * 0.5);
     
     
