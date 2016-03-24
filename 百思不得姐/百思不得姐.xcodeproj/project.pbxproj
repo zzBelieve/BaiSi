@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		077B924A1CA3B1E5008767C3 /* ZZEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92491CA3B1E5008767C3 /* ZZEssenceViewController.m */; };
+		077B924D1CA3B1F0008767C3 /* ZZNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B924C1CA3B1F0008767C3 /* ZZNewViewController.m */; };
+		077B92501CA3B1FD008767C3 /* ZZFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B924F1CA3B1FD008767C3 /* ZZFriendViewController.m */; };
+		077B92531CA3B20F008767C3 /* ZZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92521CA3B20F008767C3 /* ZZMeViewController.m */; };
+		077B92561CA3B245008767C3 /* ZZMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92551CA3B245008767C3 /* ZZMainTabBarViewController.m */; };
+		077B92591CA3B5DC008767C3 /* ZZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92581CA3B5DB008767C3 /* ZZTabBar.m */; };
+		077B925C1CA3BBFC008767C3 /* UIView+ZZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B925B1CA3BBFC008767C3 /* UIView+ZZExtension.m */; };
 		079731231CA28970000940CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731221CA28970000940CF /* main.m */; };
 		079731261CA28970000940CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731251CA28970000940CF /* AppDelegate.m */; };
 		079731291CA28970000940CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731281CA28970000940CF /* ViewController.m */; };
@@ -34,6 +41,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		077B92481CA3B1E5008767C3 /* ZZEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZEssenceViewController.h; sourceTree = "<group>"; };
+		077B92491CA3B1E5008767C3 /* ZZEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZEssenceViewController.m; sourceTree = "<group>"; };
+		077B924B1CA3B1F0008767C3 /* ZZNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZNewViewController.h; sourceTree = "<group>"; };
+		077B924C1CA3B1F0008767C3 /* ZZNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZNewViewController.m; sourceTree = "<group>"; };
+		077B924E1CA3B1FD008767C3 /* ZZFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFriendViewController.h; sourceTree = "<group>"; };
+		077B924F1CA3B1FD008767C3 /* ZZFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFriendViewController.m; sourceTree = "<group>"; };
+		077B92511CA3B20F008767C3 /* ZZMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMeViewController.h; sourceTree = "<group>"; };
+		077B92521CA3B20F008767C3 /* ZZMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeViewController.m; sourceTree = "<group>"; };
+		077B92541CA3B245008767C3 /* ZZMainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMainTabBarViewController.h; sourceTree = "<group>"; };
+		077B92551CA3B245008767C3 /* ZZMainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMainTabBarViewController.m; sourceTree = "<group>"; };
+		077B92571CA3B5DB008767C3 /* ZZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTabBar.h; sourceTree = "<group>"; };
+		077B92581CA3B5DB008767C3 /* ZZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTabBar.m; sourceTree = "<group>"; };
+		077B925A1CA3BBFC008767C3 /* UIView+ZZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZZExtension.h"; sourceTree = "<group>"; };
+		077B925B1CA3BBFC008767C3 /* UIView+ZZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZZExtension.m"; sourceTree = "<group>"; };
+		077B925D1CA3BC33008767C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		0797311E1CA28970000940CF /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079731221CA28970000940CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		079731241CA28970000940CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +125,21 @@
 				079731251CA28970000940CF /* AppDelegate.m */,
 				079731271CA28970000940CF /* ViewController.h */,
 				079731281CA28970000940CF /* ViewController.m */,
+				077B92541CA3B245008767C3 /* ZZMainTabBarViewController.h */,
+				077B92551CA3B245008767C3 /* ZZMainTabBarViewController.m */,
+				077B92481CA3B1E5008767C3 /* ZZEssenceViewController.h */,
+				077B92491CA3B1E5008767C3 /* ZZEssenceViewController.m */,
+				077B924B1CA3B1F0008767C3 /* ZZNewViewController.h */,
+				077B924C1CA3B1F0008767C3 /* ZZNewViewController.m */,
+				077B924E1CA3B1FD008767C3 /* ZZFriendViewController.h */,
+				077B924F1CA3B1FD008767C3 /* ZZFriendViewController.m */,
+				077B92511CA3B20F008767C3 /* ZZMeViewController.h */,
+				077B92521CA3B20F008767C3 /* ZZMeViewController.m */,
+				077B92571CA3B5DB008767C3 /* ZZTabBar.h */,
+				077B92581CA3B5DB008767C3 /* ZZTabBar.m */,
+				077B925A1CA3BBFC008767C3 /* UIView+ZZExtension.h */,
+				077B925B1CA3BBFC008767C3 /* UIView+ZZExtension.m */,
+				077B925D1CA3BC33008767C3 /* PrefixHeader.pch */,
 				079731211CA28970000940CF /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -199,6 +236,7 @@
 		079731161CA2896F000940CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZZ;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ZZBelieve;
 				TargetAttributes = {
@@ -266,7 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				077B925C1CA3BBFC008767C3 /* UIView+ZZExtension.m in Sources */,
+				077B924A1CA3B1E5008767C3 /* ZZEssenceViewController.m in Sources */,
+				077B92501CA3B1FD008767C3 /* ZZFriendViewController.m in Sources */,
+				077B924D1CA3B1F0008767C3 /* ZZNewViewController.m in Sources */,
+				077B92561CA3B245008767C3 /* ZZMainTabBarViewController.m in Sources */,
 				079731291CA28970000940CF /* ViewController.m in Sources */,
+				077B92591CA3B5DC008767C3 /* ZZTabBar.m in Sources */,
+				077B92531CA3B20F008767C3 /* ZZMeViewController.m in Sources */,
 				079731261CA28970000940CF /* AppDelegate.m in Sources */,
 				079731231CA28970000940CF /* main.m in Sources */,
 			);
@@ -400,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -488,6 +535,7 @@
 				0797314D1CA28970000940CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0797314E1CA28970000940CF /* Build configuration list for PBXNativeTarget "百思不得姐Tests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +544,7 @@
 				079731501CA28970000940CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		079731511CA28970000940CF /* Build configuration list for PBXNativeTarget "百思不得姐UITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +553,7 @@
 				079731531CA28970000940CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
