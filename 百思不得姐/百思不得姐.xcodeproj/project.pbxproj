@@ -23,6 +23,16 @@
 		079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797312F1CA28970000940CF /* LaunchScreen.storyboard */; };
 		0797313C1CA28970000940CF /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0797313B1CA28970000940CF /* _____Tests.m */; };
 		079731471CA28970000940CF /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731461CA28970000940CF /* _____UITests.m */; };
+		07AE258C1CA3DA3700452BE7 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258B1CA3DA3700452BE7 /* RecommendModel.m */; };
+		07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258E1CA3DA7B00452BE7 /* RecommendLeftCell.m */; };
+		07AE25911CA3DA7B00452BE7 /* RecommendLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE258F1CA3DA7B00452BE7 /* RecommendLeftCell.xib */; };
+		07AE25991CA3DC7800452BE7 /* ZZRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE25971CA3DC7800452BE7 /* ZZRecommendViewController.m */; };
+		07AE259A1CA3DC7800452BE7 /* ZZRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE25981CA3DC7800452BE7 /* ZZRecommendViewController.xib */; };
+		07AE259C1CA3ED7F00452BE7 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE259B1CA3ED7F00452BE7 /* Foundation+Log.m */; };
+		07AE25A31CA3EEA300452BE7 /* RecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE25A11CA3EEA300452BE7 /* RecommendUserCell.m */; };
+		07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE25A21CA3EEA300452BE7 /* RecommendUserCell.xib */; };
+		07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE25A61CA3F23200452BE7 /* RecommendUserModel.m */; };
+		2289E5D02AE9F0CEE9F298CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE682549ACF745913078236A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +86,23 @@
 		079731421CA28970000940CF /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079731461CA28970000940CF /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		079731481CA28970000940CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07AE258A1CA3DA3700452BE7 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
+		07AE258B1CA3DA3700452BE7 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
+		07AE258D1CA3DA7B00452BE7 /* RecommendLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLeftCell.h; sourceTree = "<group>"; };
+		07AE258E1CA3DA7B00452BE7 /* RecommendLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendLeftCell.m; sourceTree = "<group>"; };
+		07AE258F1CA3DA7B00452BE7 /* RecommendLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendLeftCell.xib; sourceTree = "<group>"; };
+		07AE25961CA3DC7800452BE7 /* ZZRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommendViewController.h; sourceTree = "<group>"; };
+		07AE25971CA3DC7800452BE7 /* ZZRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommendViewController.m; sourceTree = "<group>"; };
+		07AE25981CA3DC7800452BE7 /* ZZRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZRecommendViewController.xib; sourceTree = "<group>"; };
+		07AE259B1CA3ED7F00452BE7 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		07AE25A01CA3EEA300452BE7 /* RecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUserCell.h; sourceTree = "<group>"; };
+		07AE25A11CA3EEA300452BE7 /* RecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendUserCell.m; sourceTree = "<group>"; };
+		07AE25A21CA3EEA300452BE7 /* RecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendUserCell.xib; sourceTree = "<group>"; };
+		07AE25A51CA3F23200452BE7 /* RecommendUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendUserModel.h; sourceTree = "<group>"; };
+		07AE25A61CA3F23200452BE7 /* RecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendUserModel.m; sourceTree = "<group>"; };
+		0ED30F7280D1B9E7BA760928 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		55D1141879DDF69D408B43DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EE682549ACF745913078236A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2289E5D02AE9F0CEE9F298CB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +226,9 @@
 				077B92701CA3C72E008767C3 /* ZZFriendViewController.h */,
 				077B92711CA3C72E008767C3 /* ZZFriendViewController.m */,
 				077B928F1CA3CC7D008767C3 /* ZZFriendViewController.xib */,
+				07AE25961CA3DC7800452BE7 /* ZZRecommendViewController.h */,
+				07AE25971CA3DC7800452BE7 /* ZZRecommendViewController.m */,
+				07AE25981CA3DC7800452BE7 /* ZZRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +236,10 @@
 		077B92721CA3C72E008767C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				07AE258A1CA3DA3700452BE7 /* RecommendModel.h */,
+				07AE258B1CA3DA3700452BE7 /* RecommendModel.m */,
+				07AE25A51CA3F23200452BE7 /* RecommendUserModel.h */,
+				07AE25A61CA3F23200452BE7 /* RecommendUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +247,12 @@
 		077B92731CA3C72E008767C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07AE258D1CA3DA7B00452BE7 /* RecommendLeftCell.h */,
+				07AE258E1CA3DA7B00452BE7 /* RecommendLeftCell.m */,
+				07AE258F1CA3DA7B00452BE7 /* RecommendLeftCell.xib */,
+				07AE25A01CA3EEA300452BE7 /* RecommendUserCell.h */,
+				07AE25A11CA3EEA300452BE7 /* RecommendUserCell.m */,
+				07AE25A21CA3EEA300452BE7 /* RecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +293,7 @@
 		077B927A1CA3C72E008767C3 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				07AE259B1CA3ED7F00452BE7 /* Foundation+Log.m */,
 				077B927B1CA3C72E008767C3 /* ZZTabBar.h */,
 				077B927C1CA3C72E008767C3 /* ZZTabBar.m */,
 				077B927D1CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.h */,
@@ -280,6 +322,8 @@
 				0797313A1CA28970000940CF /* 百思不得姐Tests */,
 				079731451CA28970000940CF /* 百思不得姐UITests */,
 				0797311F1CA28970000940CF /* Products */,
+				B5E1AF8347AADF91FB364714 /* Pods */,
+				616D3ECA6D93CA9156DE057A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,6 +378,23 @@
 			path = "百思不得姐UITests";
 			sourceTree = "<group>";
 		};
+		616D3ECA6D93CA9156DE057A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE682549ACF745913078236A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5E1AF8347AADF91FB364714 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0ED30F7280D1B9E7BA760928 /* Pods.debug.xcconfig */,
+				55D1141879DDF69D408B43DD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,9 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0797314B1CA28970000940CF /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
+				3EB8231F369BBA16B5BC3D91 /* Check Pods Manifest.lock */,
 				0797311A1CA28970000940CF /* Sources */,
 				0797311B1CA28970000940CF /* Frameworks */,
 				0797311C1CA28970000940CF /* Resources */,
+				4C7F6BF5C8830A032211D14D /* Embed Pods Frameworks */,
+				E1B8EE889D94EE336A894CB1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,8 +503,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */,
+				07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */,
 				079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */,
 				0797312E1CA28970000940CF /* Assets.xcassets in Resources */,
+				07AE259A1CA3DC7800452BE7 /* ZZRecommendViewController.xib in Resources */,
+				07AE25911CA3DA7B00452BE7 /* RecommendLeftCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +527,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3EB8231F369BBA16B5BC3D91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C7F6BF5C8830A032211D14D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1B8EE889D94EE336A894CB1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0797311A1CA28970000940CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -467,12 +582,18 @@
 			files = (
 				077B92881CA3C72E008767C3 /* ZZTabBar.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
+				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
 				077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */,
 				077B92891CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m in Sources */,
+				07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */,
 				077B928A1CA3C72E008767C3 /* UIView+ZZExtension.m in Sources */,
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,
+				07AE25A31CA3EEA300452BE7 /* RecommendUserCell.m in Sources */,
+				07AE25991CA3DC7800452BE7 /* ZZRecommendViewController.m in Sources */,
 				077B928B1CA3C72E008767C3 /* ZZMainTabBarViewController.m in Sources */,
+				07AE258C1CA3DA3700452BE7 /* RecommendModel.m in Sources */,
 				079731261CA28970000940CF /* AppDelegate.m in Sources */,
+				07AE259C1CA3ED7F00452BE7 /* Foundation+Log.m in Sources */,
 				077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */,
 				079731231CA28970000940CF /* main.m in Sources */,
 				077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */,
@@ -604,6 +725,7 @@
 		};
 		0797314C1CA28970000940CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED30F7280D1B9E7BA760928 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -618,6 +740,7 @@
 		};
 		0797314D1CA28970000940CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55D1141879DDF69D408B43DD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

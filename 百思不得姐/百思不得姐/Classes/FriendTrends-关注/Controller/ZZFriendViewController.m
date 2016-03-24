@@ -7,7 +7,7 @@
 //
 
 #import "ZZFriendViewController.h"
-
+#import "ZZRecommendViewController.h"
 @interface ZZFriendViewController ()
 
 @end
@@ -40,6 +40,10 @@
     
     
     ZZLog(@"leftButtonClick");
+    ZZRecommendViewController *vc = [[ZZRecommendViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
