@@ -12,12 +12,39 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
 @property (weak, nonatomic) IBOutlet UITextField *passWordField;
 
+@property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *LeftMarginCon;
 @end
 
 @implementation ZZLoginRegisterViewController
 
 
 
+- (IBAction)showAnimation:(id)sender {
+    
+    if (self.LeftMarginCon.constant==0) {
+        
+        self.LeftMarginCon.constant = - self.view.zz_Width;
+        
+        [self.rightButton setTitle:@"已有账号?" forState:UIControlStateNormal];
+    }else{
+      [self.rightButton setTitle:@"注册账号" forState:UIControlStateNormal];
+    
+        self.LeftMarginCon.constant=0;
+    
+    }
+    
+    
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        [self.view layoutIfNeeded];
+        
+    }];
+    
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
