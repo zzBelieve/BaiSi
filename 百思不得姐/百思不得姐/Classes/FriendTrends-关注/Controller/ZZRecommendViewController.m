@@ -28,6 +28,12 @@
 
 //右边数据
 @property(nonatomic,strong)NSArray *userArray;
+
+//请求参数
+@property(nonatomic,strong)NSMutableDictionary *params;
+
+
+@property(nonatomic,strong)AFHTTPSessionManager *manager;
 @end
 
 @implementation ZZRecommendViewController
@@ -67,9 +73,76 @@ static NSString *const KrightCellID = @"KrightCellID";
     self.rightTableView.mj_footer.hidden = YES;
 
 
+    self.rightTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
 
 }
 
+#pragma mark - 加载最新
+
+- (void)loadNewData{
+    
+   RecommendModel *model = SelectRow;
+    
+    //设置当前页码
+    
+    model.currentPage = 1;
+    
+    self.manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(model.id);
+    params[@"page"] = @(model.currentPage);
+    
+    
+    self.params = params;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+//        ZZLog(@"responseObject----%@",responseObject);
+        
+        
+        //                NSArray *users  = [NSArray array];
+        
+        
+        
+        
+        
+        NSArray *users= [RecommendUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [model.usersArray removeAllObjects];
+        
+        [model.usersArray addObjectsFromArray:users];
+        
+        
+        //保存总数
+        
+        model.total = [responseObject[@"total"] integerValue];
+        
+        
+        if (self.params!=params) return;
+        
+        
+        
+        [self.rightTableView reloadData];
+        
+        [self.rightTableView.mj_header endRefreshing];
+        
+        
+        [self checkFooter];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+         if (self.params!=params) return;
+        
+         [self.rightTableView.mj_header endRefreshing];
+        
+    }];
+
+
+}
 #pragma mark - 加载更多
 - (void)loadMoreData{
 
@@ -77,7 +150,7 @@ static NSString *const KrightCellID = @"KrightCellID";
     RecommendModel *model = SelectRow;
     
 
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    self.manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
@@ -85,7 +158,7 @@ static NSString *const KrightCellID = @"KrightCellID";
     params[@"category_id"] = @(model.id);
     params[@"page"] = @(model.currentPage++);
     
-    [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
         ZZLog(@"responseObject----%@",responseObject);
@@ -102,19 +175,7 @@ static NSString *const KrightCellID = @"KrightCellID";
         [self.rightTableView reloadData];
         
         
-        //结束刷新
-        
-        
-        if (model.usersArray.count == model.total) {
-            
-            
-            [self.rightTableView.mj_footer endRefreshingWithNoMoreData];
-            
-        }else{
-        
-           [self.rightTableView.mj_footer endRefreshing];
-        }
-        
+      
         
         
         
@@ -157,6 +218,7 @@ static NSString *const KrightCellID = @"KrightCellID";
 
 
     [SVProgressHUD showWithStatus:@"加载中"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     NSMutableDictionary *parmas = [NSMutableDictionary dictionary];
@@ -202,8 +264,32 @@ static NSString *const KrightCellID = @"KrightCellID";
 
 
 }
+//检测footer
+- (void)checkFooter{
 
 
+    //结束刷新
+    RecommendModel *model = self.categoryArray[self.leftTableView.indexPathForSelectedRow.row ];
+    
+    
+    //控制footer显示或者隐藏
+    
+    self.rightTableView.mj_footer.hidden = (model.usersArray.count==0);
+    
+    
+    
+    if (model.usersArray.count == model.total) {
+        
+        
+        [self.rightTableView.mj_footer endRefreshingWithNoMoreData];
+        
+    }else{
+        
+        [self.rightTableView.mj_footer endRefreshing];
+    }
+    
+
+}
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
@@ -219,11 +305,11 @@ static NSString *const KrightCellID = @"KrightCellID";
         
         
         
+        [self checkFooter];
+        
         RecommendModel *model = self.categoryArray[self.leftTableView.indexPathForSelectedRow.row ];
         
-        //控制footer显示或者隐藏
         
-        self.rightTableView.mj_footer.hidden = (model.usersArray.count==0);
         
         return model.usersArray.count;
     
@@ -292,53 +378,12 @@ static NSString *const KrightCellID = @"KrightCellID";
             //赶紧刷新表格 马上显示
            [self.rightTableView reloadData];
             
-            //设置当前页码
             
-            model.currentPage = 1;
+            //header刷新
             
-            AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+           [self.rightTableView.mj_header beginRefreshing];
             
-            NSMutableDictionary *params = [NSMutableDictionary dictionary];
-            params[@"a"] = @"list";
-            params[@"c"] = @"subscribe";
-            params[@"category_id"] = @(model.id);
-            params[@"page"] = @(model.currentPage);
-            [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                
-                
-                ZZLog(@"responseObject----%@",responseObject);
-                
-                
-//                NSArray *users  = [NSArray array];
-                
-                
-               
-                
-                
-                NSArray *users= [RecommendUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-                
-                [model.usersArray addObjectsFromArray:users];
-                
-                
-                //保存总数
-                
-                model.total = [responseObject[@"total"] integerValue];
-                
-                
-                [self.rightTableView reloadData];
-                
-                
-                if (model.usersArray.count == model.total) {
-                    
-                    
-                    [self.rightTableView.mj_footer endRefreshingWithNoMoreData];
-                }
-                
-            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                
-                
-                
-            }];
+           
         
         
         }
@@ -354,6 +399,15 @@ static NSString *const KrightCellID = @"KrightCellID";
     
    
     
+
+}
+
+
+//销毁控制器 取消所有的请求
+- (void)dealloc{
+
+  
+    [self.manager.operationQueue cancelAllOperations];
 
 }
 - (void)didReceiveMemoryWarning {
