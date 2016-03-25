@@ -7,7 +7,7 @@
 //
 
 #import "ZZEssenceViewController.h"
-
+#import "ZZRecommendTagsViewController.h"
 @interface ZZEssenceViewController ()
 
 @end
@@ -40,6 +40,11 @@
 
 
     ZZLog(@"leftButtonClick");
+    
+    
+    ZZRecommendTagsViewController *vc = [[ZZRecommendTagsViewController alloc] init];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
