@@ -9,6 +9,7 @@
 #import "ZZRecommendViewController.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
+#import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import "RecommendLeftCell.h"
 #import "RecommendUserCell.h"
@@ -35,6 +36,9 @@
 static NSString *const KleftCellID = @"KleftCellID";
 
 static NSString *const KrightCellID = @"KrightCellID";
+
+#define SelectRow self.categoryArray[self.leftTableView.indexPathForSelectedRow.row];
+
 #pragma mark - View lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,12 +51,84 @@ static NSString *const KrightCellID = @"KrightCellID";
     
     [self setUpTableView];
     
+    [self setUpRefresh];
+    
     [self loadleftData];
     
     
     
 }
 
+- (void)setUpRefresh{
+
+
+    self.rightTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+
+    self.rightTableView.mj_footer.hidden = YES;
+
+
+
+}
+
+#pragma mark - 加载更多
+- (void)loadMoreData{
+
+    
+    RecommendModel *model = SelectRow;
+    
+
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(model.id);
+    params[@"page"] = @(model.currentPage++);
+    
+    [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        ZZLog(@"responseObject----%@",responseObject);
+        
+        
+        //                NSArray *users  = [NSArray array];
+        
+        
+        NSArray *users= [RecommendUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [model.usersArray addObjectsFromArray:users];
+        
+        
+        [self.rightTableView reloadData];
+        
+        
+        //结束刷新
+        
+        
+        if (model.usersArray.count == model.total) {
+            
+            
+            [self.rightTableView.mj_footer endRefreshingWithNoMoreData];
+            
+        }else{
+        
+           [self.rightTableView.mj_footer endRefreshing];
+        }
+        
+        
+        
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        
+        
+    }];
+   
+
+
+
+}
 - (void)setUpTableView{
 
 
@@ -60,7 +136,7 @@ static NSString *const KrightCellID = @"KrightCellID";
     [self.leftTableView registerNib:[UINib nibWithNibName:NSStringFromClass([RecommendLeftCell class]) bundle:nil] forCellReuseIdentifier:KleftCellID];
     self.leftTableView.dataSource = self;
     self.leftTableView.delegate = self;
-    self.leftTableView.tableFooterView = [[UIView alloc] init];
+//    self.leftTableView.tableFooterView = [[UIView alloc] init];
 
 
     [self.rightTableView registerNib:[UINib nibWithNibName:NSStringFromClass([RecommendUserCell class]) bundle:nil] forCellReuseIdentifier:KrightCellID];
@@ -136,11 +212,18 @@ static NSString *const KrightCellID = @"KrightCellID";
     if (tableView==_leftTableView) {
         
           return self.categoryArray.count;
+        
     }else{
     
 //        return self.userArray.count;
         
+        
+        
         RecommendModel *model = self.categoryArray[self.leftTableView.indexPathForSelectedRow.row ];
+        
+        //控制footer显示或者隐藏
+        
+        self.rightTableView.mj_footer.hidden = (model.usersArray.count==0);
         
         return model.usersArray.count;
     
@@ -186,30 +269,40 @@ static NSString *const KrightCellID = @"KrightCellID";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
-
+    RecommendModel *model =  self.categoryArray[indexPath.row];
+    
+    [self.leftTableView.mj_footer endRefreshing];
+    [self.leftTableView.mj_header endRefreshing];
     
     
     if (tableView==_leftTableView) {
         
         
-        RecommendModel *model =  self.categoryArray[indexPath.row];
+        
         
         
         if (model.usersArray.count) {
             
-            
+            //显示曾经的数据
             [self.rightTableView reloadData];
             
         }else{
         
-        
+            
+            //赶紧刷新表格 马上显示
+           [self.rightTableView reloadData];
+            
+            //设置当前页码
+            
+            model.currentPage = 1;
+            
             AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
             
             NSMutableDictionary *params = [NSMutableDictionary dictionary];
             params[@"a"] = @"list";
             params[@"c"] = @"subscribe";
             params[@"category_id"] = @(model.id);
-            
+            params[@"page"] = @(model.currentPage);
             [manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 
                 
@@ -219,13 +312,27 @@ static NSString *const KrightCellID = @"KrightCellID";
 //                NSArray *users  = [NSArray array];
                 
                 
+               
+                
+                
                 NSArray *users= [RecommendUserModel mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
                 
                 [model.usersArray addObjectsFromArray:users];
                 
                 
+                //保存总数
+                
+                model.total = [responseObject[@"total"] integerValue];
+                
+                
                 [self.rightTableView reloadData];
                 
+                
+                if (model.usersArray.count == model.total) {
+                    
+                    
+                    [self.rightTableView.mj_footer endRefreshingWithNoMoreData];
+                }
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                 

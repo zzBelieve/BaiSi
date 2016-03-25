@@ -22,9 +22,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk5-Lg-i0x">
-                        <rect key="frame" x="70" y="30" width="42" height="21"/>
+                        <rect key="frame" x="70" y="30" width="196" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5P-NW-fJB">
@@ -40,10 +40,10 @@
                             <constraint firstAttribute="height" constant="30" id="noe-i5-dtK"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <state key="normal" title="+ 关注">
+                        <state key="normal" title="+ 关注" backgroundImage="FollowBtnBg">
                             <color key="titleColor" red="1" green="0.27214489590000002" blue="0.041421768519999999" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
-                        <state key="highlighted" title="+ 关注" backgroundImage="cellFollowClickIcon">
+                        <state key="highlighted" title="+ 关注">
                             <color key="titleColor" red="1" green="0.27214489590000002" blue="0.041421768519999999" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
@@ -55,6 +55,7 @@
                     <constraint firstItem="N5P-NW-fJB" firstAttribute="bottom" secondItem="CIV-IT-Lga" secondAttribute="bottom" id="SrB-ca-Gao"/>
                     <constraint firstItem="SVs-ho-ReV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TQ2-gL-EPb"/>
                     <constraint firstItem="N5P-NW-fJB" firstAttribute="leading" secondItem="vk5-Lg-i0x" secondAttribute="leading" id="TSd-tw-2d9"/>
+                    <constraint firstItem="SVs-ho-ReV" firstAttribute="leading" secondItem="vk5-Lg-i0x" secondAttribute="trailing" constant="10" id="Z94-qn-RG2"/>
                     <constraint firstItem="vk5-Lg-i0x" firstAttribute="top" secondItem="CIV-IT-Lga" secondAttribute="top" id="mP1-wH-h48"/>
                     <constraint firstItem="CIV-IT-Lga" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uOQ-nA-dGJ"/>
                 </constraints>
@@ -68,6 +69,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="cellFollowClickIcon" width="19" height="20"/>
+        <image name="FollowBtnBg" width="51" height="25"/>
     </resources>
 </document>

@@ -23,4 +23,10 @@
 //这个类别对应的用户数据(辅助)
 
 @property(nonatomic,strong)NSMutableArray *usersArray;
+
+
+/** 总数 */
+@property (nonatomic, assign) NSInteger total;
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger currentPage;
 @end
