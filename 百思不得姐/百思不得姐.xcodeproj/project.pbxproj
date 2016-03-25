@@ -11,6 +11,9 @@
 		0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */; };
 		0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */; };
 		0720E2EF1CA4EDB900ACD947 /* ZZRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0720E2ED1CA4EDB900ACD947 /* ZZRecommandTagCell.xib */; };
+		0720E2F31CA51BEE00ACD947 /* ZZLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2F11CA51BEE00ACD947 /* ZZLoginRegisterViewController.m */; };
+		0720E2F41CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0720E2F21CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib */; };
+		0720E2F71CA52BAE00ACD947 /* ZZVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2F61CA52BAE00ACD947 /* ZZVerticalButton.m */; };
 		077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92651CA3C72E008767C3 /* ZZMeViewController.m */; };
 		077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B926B1CA3C72E008767C3 /* ZZEssenceViewController.m */; };
 		077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92711CA3C72E008767C3 /* ZZFriendViewController.m */; };
@@ -64,6 +67,11 @@
 		0720E2EB1CA4EDB900ACD947 /* ZZRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommandTagCell.h; sourceTree = "<group>"; };
 		0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommandTagCell.m; sourceTree = "<group>"; };
 		0720E2ED1CA4EDB900ACD947 /* ZZRecommandTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZRecommandTagCell.xib; sourceTree = "<group>"; };
+		0720E2F01CA51BEE00ACD947 /* ZZLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZLoginRegisterViewController.h; sourceTree = "<group>"; };
+		0720E2F11CA51BEE00ACD947 /* ZZLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZLoginRegisterViewController.m; sourceTree = "<group>"; };
+		0720E2F21CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		0720E2F51CA52BAE00ACD947 /* ZZVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZVerticalButton.h; sourceTree = "<group>"; };
+		0720E2F61CA52BAE00ACD947 /* ZZVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZVerticalButton.m; sourceTree = "<group>"; };
 		077B925D1CA3BC33008767C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		077B92641CA3C72E008767C3 /* ZZMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMeViewController.h; sourceTree = "<group>"; };
 		077B92651CA3C72E008767C3 /* ZZMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeViewController.m; sourceTree = "<group>"; };
@@ -247,6 +255,9 @@
 				07AE25961CA3DC7800452BE7 /* ZZRecommendViewController.h */,
 				07AE25971CA3DC7800452BE7 /* ZZRecommendViewController.m */,
 				07AE25981CA3DC7800452BE7 /* ZZRecommendViewController.xib */,
+				0720E2F01CA51BEE00ACD947 /* ZZLoginRegisterViewController.h */,
+				0720E2F11CA51BEE00ACD947 /* ZZLoginRegisterViewController.m */,
+				0720E2F21CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +282,8 @@
 				07AE25A01CA3EEA300452BE7 /* RecommendUserCell.h */,
 				07AE25A11CA3EEA300452BE7 /* RecommendUserCell.m */,
 				07AE25A21CA3EEA300452BE7 /* RecommendUserCell.xib */,
+				0720E2F51CA52BAE00ACD947 /* ZZVerticalButton.h */,
+				0720E2F61CA52BAE00ACD947 /* ZZVerticalButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */,
+				0720E2F41CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib in Resources */,
 				0720E2EF1CA4EDB900ACD947 /* ZZRecommandTagCell.xib in Resources */,
 				07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */,
 				079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */,
@@ -600,11 +614,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				077B92881CA3C72E008767C3 /* ZZTabBar.m in Sources */,
+				0720E2F71CA52BAE00ACD947 /* ZZVerticalButton.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
 				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
 				077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */,
 				077B92891CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m in Sources */,
 				0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */,
+				0720E2F31CA51BEE00ACD947 /* ZZLoginRegisterViewController.m in Sources */,
 				07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */,
 				077B928A1CA3C72E008767C3 /* UIView+ZZExtension.m in Sources */,
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,

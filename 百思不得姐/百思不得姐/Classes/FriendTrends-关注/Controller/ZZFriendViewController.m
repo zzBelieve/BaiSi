@@ -8,6 +8,7 @@
 
 #import "ZZFriendViewController.h"
 #import "ZZRecommendViewController.h"
+#import "ZZLoginRegisterViewController.h"
 @interface ZZFriendViewController ()
 
 @end
@@ -43,6 +44,16 @@
     ZZRecommendViewController *vc = [[ZZRecommendViewController alloc] init];
     
     [self.navigationController pushViewController:vc animated:YES];
+    
+}
+
+//登录注册
+- (IBAction)loginOrRegister:(id)sender {
+    
+    ZZLoginRegisterViewController *vc= [[ZZLoginRegisterViewController alloc] init];
+    
+    
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 
