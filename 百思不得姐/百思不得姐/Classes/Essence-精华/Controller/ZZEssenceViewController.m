@@ -111,7 +111,7 @@
     UIView *titleView = [[UIView alloc] init];
     titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     titleView.zz_Width = self.view.zz_Width;
-    titleView.zz_Height = 50;
+    titleView.zz_Height = 35;
     titleView.zz_Y = 64;
     self.titleView  = titleView;
     [self.view addSubview:titleView];
@@ -227,11 +227,7 @@
     vc.view.zz_X = scrollView.contentOffset.x;
     vc.view.zz_Y = 0;
     
-    CGFloat top = CGRectGetMaxY(self.titleView.frame);
-    CGFloat bottom = self.tabBarController.tabBar.zz_Height;
-    
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    vc.tableView.scrollIndicatorInsets = vc.tableView.contentInset;
+   
     
     [scrollView addSubview:vc.view];
     
