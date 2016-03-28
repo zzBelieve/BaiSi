@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *CaiButton;
 @property (weak, nonatomic) IBOutlet UIButton *ShareButton;
 @property (weak, nonatomic) IBOutlet UIButton *CommentButton;
+@property (weak, nonatomic) IBOutlet UIImageView *sinaView;
 
 @end
 
@@ -51,7 +52,7 @@
     
     self.timeLabel.text = model.create_time;
     
-    
+    self.sinaView.hidden = !model.is_sinav;
     
     //帖子创建时间
 //    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

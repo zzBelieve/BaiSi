@@ -6,8 +6,8 @@
 //  Copyright © 2016年 ZZBelieve. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZZTopicViewController.h"
 
-@interface ZZVoiceTableViewController : UITableViewController
+@interface ZZVoiceTableViewController : ZZTopicViewController
 
 @end

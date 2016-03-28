@@ -1,0 +1,31 @@
+//
+//  ZZTopicViewController.h
+//  百思不得姐
+//
+//  Created by ZZBelieve on 16/3/28.
+//  Copyright © 2016年 ZZBelieve. All rights reserved.
+//
+
+
+
+
+
+#import <UIKit/UIKit.h>
+
+typedef NS_ENUM(NSInteger, ZZTopicType) {
+    
+    
+    ZZTopicTypeAll = 1,
+    ZZTopicTypePicture = 10,
+    ZZTopicTypeWord = 29,
+    ZZTopicTypeVoice = 31,
+    ZZTopicTypeVideo = 41
+    
+};
+
+
+@interface ZZTopicViewController : UITableViewController
+
+@property(nonatomic,assign)ZZTopicType type;
+
+@end

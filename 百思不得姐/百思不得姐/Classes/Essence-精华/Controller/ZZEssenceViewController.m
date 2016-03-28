@@ -8,11 +8,7 @@
 
 #import "ZZEssenceViewController.h"
 #import "ZZRecommendTagsViewController.h"
-#import "ZZAllTableViewController.h"
-#import "ZZVideoTableViewController.h"
-#import "ZZVoiceTableViewController.h"
-#import "ZZPictureTableViewController.h"
-#import "ZZWordTableViewController.h"
+#import "ZZTopicViewController.h"
 
 @interface ZZEssenceViewController ()<UIScrollViewDelegate>
 
@@ -38,13 +34,14 @@
     [self creatNav];
     
     
+    //初始化 子控制器
+    
+    [self setUpChildController];
     
     [self setUpTitleView];
     
     
-    //初始化 子控制器
     
-    [self setUpChildController];
     
     [self setUpContentView];
     
@@ -56,21 +53,30 @@
 - (void)setUpChildController{
 
 
-    ZZAllTableViewController *allVc = [[ZZAllTableViewController alloc] init];
-    
+    ZZTopicViewController *allVc = [[ZZTopicViewController alloc] init];
+    allVc.title = @"全部";
+    allVc.type = ZZTopicTypeAll;
     [self addChildViewController:allVc];
 
 
-    ZZVideoTableViewController *VideoVc = [[ZZVideoTableViewController alloc] init];
+    ZZTopicViewController *VideoVc = [[ZZTopicViewController alloc] init];
+    VideoVc.title = @"视频";
+    VideoVc.type = ZZTopicTypeVideo;
     [self addChildViewController:VideoVc];
     
-    ZZVoiceTableViewController *VoiceVc = [[ZZVoiceTableViewController alloc] init];
+    ZZTopicViewController *VoiceVc = [[ZZTopicViewController alloc] init];
+    VoiceVc.title = @"声音";
+    VoiceVc.type = ZZTopicTypeVoice;
     [self addChildViewController:VoiceVc];
     
-    ZZPictureTableViewController *PictureVc = [[ZZPictureTableViewController alloc] init];
+    ZZTopicViewController *PictureVc = [[ZZTopicViewController alloc] init];
+    PictureVc.title = @"图片";
+    PictureVc.type = ZZTopicTypePicture;
     [self addChildViewController:PictureVc];
     
-    ZZWordTableViewController *WordVc = [[ZZWordTableViewController alloc] init];
+    ZZTopicViewController *WordVc = [[ZZTopicViewController alloc] init];
+    WordVc.title = @"段子";
+    WordVc.type = ZZTopicTypeWord;
     [self addChildViewController:WordVc];
 
 
@@ -129,21 +135,21 @@
     
     
     
-    NSArray *titleArray = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+//    NSArray *titleArray = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     
-    CGFloat buttonW = titleView.zz_Width / titleArray.count;
+    CGFloat buttonW = titleView.zz_Width / self.childViewControllers.count;
     CGFloat buttonH = titleView.zz_Height;
     CGFloat buttonY = 0;
-    for (int i = 0; i<titleArray.count; i++) {
+    for (int i = 0; i<self.childViewControllers.count; i++) {
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.zz_Width = buttonW;
         button.zz_Height = buttonH;
         button.zz_X = i * buttonW;
         button.zz_Y = buttonY;
-        
-        [button setTitle:titleArray[i] forState:UIControlStateNormal];
-        [button setTitle:titleArray[i] forState:UIControlStateSelected];
+         UIViewController *vc = self.childViewControllers[i];
+        [button setTitle:vc.title forState:UIControlStateNormal];
+        [button setTitle:vc.title forState:UIControlStateSelected];
         
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];

@@ -27,4 +27,7 @@
 /** 评论的数量 */
 @property (nonatomic, assign) NSInteger comment;
 
+
+@property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
+
 @end

@@ -135,6 +135,13 @@
                             <constraint firstItem="kun-cK-fty" firstAttribute="leading" secondItem="8RS-gu-dMm" secondAttribute="trailing" constant="8" id="wXB-TJ-ew4"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-8u-mgm">
+                        <rect key="frame" x="34" y="36" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="Sxs-Fj-QTc"/>
+                            <constraint firstAttribute="height" constant="14" id="TKi-tu-6tX"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="dv6-yV-Vvf" secondAttribute="trailing" constant="8" id="0uK-cr-6rU"/>
@@ -145,7 +152,9 @@
                     <constraint firstItem="l3j-xd-zw3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="S89-wc-XWI"/>
                     <constraint firstItem="1gU-Bv-rnu" firstAttribute="leading" secondItem="en7-e3-1Ds" secondAttribute="leading" id="YLu-Ca-3kw"/>
                     <constraint firstItem="dv6-yV-Vvf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="b1H-Ib-f14"/>
+                    <constraint firstItem="dsV-8u-mgm" firstAttribute="trailing" secondItem="Y02-S5-qtH" secondAttribute="trailing" constant="5" id="bja-wO-f05"/>
                     <constraint firstItem="Y02-S5-qtH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hNI-dC-YwF"/>
+                    <constraint firstItem="dsV-8u-mgm" firstAttribute="bottom" secondItem="Y02-S5-qtH" secondAttribute="bottom" constant="5" id="l3x-BW-AVq"/>
                     <constraint firstAttribute="bottom" secondItem="l3j-xd-zw3" secondAttribute="bottom" id="l6j-VF-nUY"/>
                     <constraint firstItem="en7-e3-1Ds" firstAttribute="top" secondItem="Y02-S5-qtH" secondAttribute="top" id="nkK-kS-LVz"/>
                     <constraint firstItem="dv6-yV-Vvf" firstAttribute="leading" secondItem="en7-e3-1Ds" secondAttribute="trailing" constant="20" id="uKF-wu-saQ"/>
@@ -158,12 +167,14 @@
                 <outlet property="ShareButton" destination="0go-fj-qkZ" id="IEe-Wo-LWX"/>
                 <outlet property="headImgaeView" destination="Y02-S5-qtH" id="nZC-Jf-rN0"/>
                 <outlet property="nickName" destination="en7-e3-1Ds" id="2Zk-pK-KEo"/>
+                <outlet property="sinaView" destination="dsV-8u-mgm" id="IVP-b2-Bcq"/>
                 <outlet property="timeLabel" destination="1gU-Bv-rnu" id="AtX-vt-Fve"/>
             </connections>
             <point key="canvasLocation" x="239" y="301.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cellFollowDisableIcon" width="19" height="20"/>
         <image name="mainCellCai" width="20" height="20"/>

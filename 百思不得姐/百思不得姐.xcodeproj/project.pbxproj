@@ -25,6 +25,7 @@
 		0769C7AA1CA9066700D2882A /* TopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7A81CA9066700D2882A /* TopicCell.m */; };
 		0769C7AB1CA9066700D2882A /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0769C7A91CA9066700D2882A /* TopicCell.xib */; };
 		0769C7AE1CA9269D00D2882A /* NSDate+ZZDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7AD1CA9269D00D2882A /* NSDate+ZZDateExtension.m */; };
+		0769C7B11CA93DF900D2882A /* ZZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */; };
 		077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92651CA3C72E008767C3 /* ZZMeViewController.m */; };
 		077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B926B1CA3C72E008767C3 /* ZZEssenceViewController.m */; };
 		077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92711CA3C72E008767C3 /* ZZFriendViewController.m */; };
@@ -104,6 +105,8 @@
 		0769C7A91CA9066700D2882A /* TopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
 		0769C7AC1CA9269D00D2882A /* NSDate+ZZDateExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZZDateExtension.h"; sourceTree = "<group>"; };
 		0769C7AD1CA9269D00D2882A /* NSDate+ZZDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZDateExtension.m"; sourceTree = "<group>"; };
+		0769C7AF1CA93DF900D2882A /* ZZTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicViewController.h; sourceTree = "<group>"; };
+		0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicViewController.m; sourceTree = "<group>"; };
 		077B925D1CA3BC33008767C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		077B92641CA3C72E008767C3 /* ZZMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMeViewController.h; sourceTree = "<group>"; };
 		077B92651CA3C72E008767C3 /* ZZMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeViewController.m; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 			children = (
 				077B926A1CA3C72E008767C3 /* ZZEssenceViewController.h */,
 				077B926B1CA3C72E008767C3 /* ZZEssenceViewController.m */,
+				0769C7AF1CA93DF900D2882A /* ZZTopicViewController.h */,
+				0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */,
 				0769C7921CA8D03A00D2882A /* ZZAllTableViewController.h */,
 				0769C7931CA8D03A00D2882A /* ZZAllTableViewController.m */,
 				0769C7951CA8D07000D2882A /* ZZVideoTableViewController.h */,
@@ -676,6 +681,7 @@
 				077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */,
 				077B92891CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m in Sources */,
 				0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */,
+				0769C7B11CA93DF900D2882A /* ZZTopicViewController.m in Sources */,
 				0720E2F31CA51BEE00ACD947 /* ZZLoginRegisterViewController.m in Sources */,
 				0769C7AA1CA9066700D2882A /* TopicCell.m in Sources */,
 				07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */,
