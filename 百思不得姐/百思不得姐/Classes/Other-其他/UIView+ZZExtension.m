@@ -107,4 +107,40 @@
     
 }
 
+
+- (void)setZz_CenterX:(CGFloat)zz_CenterX{
+
+
+    CGPoint center = self.center;
+    
+    center.x = zz_CenterX;
+    
+    self.center = center;
+    
+
+}
+
+
+- (CGFloat)zz_CenterX{
+
+    return self.center.x;
+}
+
+
+- (void)setZz_CenterY:(CGFloat)zz_CenterY{
+
+    CGPoint center = self.center;
+    
+    center.y = zz_CenterY;
+    
+    self.center = center;
+
+
+}
+
+- (CGFloat)zz_CenterY{
+
+   return self.center.y;
+
+}
 @end

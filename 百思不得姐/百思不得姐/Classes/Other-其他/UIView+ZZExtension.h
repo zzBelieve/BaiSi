@@ -19,4 +19,9 @@
 
 @property(nonatomic,assign)CGSize zz_size;
 
+
+
+@property(nonatomic,assign)CGFloat zz_CenterX;
+@property(nonatomic,assign)CGFloat zz_CenterY;
+
 @end
