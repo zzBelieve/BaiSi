@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *CommentButton;
 @property (weak, nonatomic) IBOutlet UIImageView *sinaView;
 
+@property (weak, nonatomic) IBOutlet UILabel *myTextLabel;
 @end
 
 @implementation TopicCell
@@ -54,67 +55,7 @@
     
     self.sinaView.hidden = !model.is_sinav;
     
-    //帖子创建时间
-//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-//    NSDate *creatDate = [formatter dateFromString:model.create_time];
-////    NSDate *now = [NSDate date];
-//    
-//    if (creatDate.isThisYear) {
-//        
-//        if (creatDate.isToday) {
-//            
-//            NSDateComponents *componts =[[NSDate date] deltaFromDate:creatDate];
-//            
-//            if (componts.hour >=1) {
-//                
-//                self.timeLabel.text = [NSString stringWithFormat:@"%zd小时前",componts.hour];
-//            }else if (componts.minute >= 1){
-//            
-//            
-//                self.timeLabel.text = [NSString stringWithFormat:@"%zd分钟前",componts.minute];
-//                
-//            }else{
-//            
-//                 self.timeLabel.text = @"刚刚";
-//            
-//            }
-//            
-//            
-//        }else if (creatDate.isYesterday){
-//        
-//          formatter.dateFormat = @"昨天 HH:mm:ss";
-//            
-//          self.timeLabel.text = [formatter stringFromDate:creatDate];
-//        
-//        }else{
-//        
-//        
-//            formatter.dateFormat = @"MM-dd HH:mm:ss";
-//            
-//            self.timeLabel.text = [formatter stringFromDate:creatDate];
-//            
-//        }
-//        
-//        
-//        
-//    }else{
-//    
-//    
-//    
-//    
-//       
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//    
-//    }
-    
-    
+    self.myTextLabel.text = model.text;
     
     [self setButton:self.DingButton count:model.ding placeholder:@"顶"];
     

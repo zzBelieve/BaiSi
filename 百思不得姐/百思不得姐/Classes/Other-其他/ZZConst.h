@@ -13,3 +13,8 @@
 UIKIT_EXTERN CGFloat const ZZTitilesViewH;
 
 UIKIT_EXTERN CGFloat const ZZTitilesViewY;
+
+
+UIKIT_EXTERN CGFloat const ZZTopicCellMargin;
+UIKIT_EXTERN CGFloat const ZZTopicTextY;
+UIKIT_EXTERN CGFloat const ZZTopicBottomHeight;

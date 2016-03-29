@@ -30,4 +30,11 @@
 
 @property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
 
+
+
+
+/**辅助属性 */
+
+@property (nonatomic, assign) CGFloat cellHeight;
+
 @end

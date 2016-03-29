@@ -42,4 +42,29 @@
     }
 }
 
+
+- (CGFloat)cellHeight{
+
+    if (!_cellHeight) {
+        
+        ZZLogFunc
+            CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * ZZTopicCellMargin, MAXFLOAT);
+        
+            CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
+        
+        
+            _cellHeight = ZZTopicTextY + textH + ZZTopicBottomHeight + 2 * ZZTopicCellMargin;
+        //
+        
+        
+        
+    }
+
+
+    return _cellHeight;
+    
+
+
+
+}
 @end

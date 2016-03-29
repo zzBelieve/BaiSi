@@ -12,6 +12,7 @@
 #import <MJRefresh.h>
 #import "TopicModel.h"
 #import "TopicCell.h"
+#import "ZZConst.h"
 @interface ZZTopicViewController ()
 
 
@@ -210,11 +211,9 @@ static NSString *const kcellid = @"topic";
     
     
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     
@@ -236,6 +235,31 @@ static NSString *const kcellid = @"topic";
     
     return cell;
     
+}
+
+
+#pragma mark - UITableViewDataDelegate
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+
+    TopicModel *model = self.dataArray[indexPath.row];
+    
+    
+    
+    
+//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * ZZTopicCellMargin, MAXFLOAT);
+//    
+//    CGFloat textH = [model.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
+//    
+//    
+//    CGFloat cellH = ZZTopicTextY + textH + ZZTopicBottomHeight + 2 * ZZTopicCellMargin;
+//    
+ 
+
+
+    return model.cellHeight;
 }
 
 /*
