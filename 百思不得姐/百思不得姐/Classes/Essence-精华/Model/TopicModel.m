@@ -8,7 +8,20 @@
 
 #import "TopicModel.h"
 #import "NSDate+ZZDateExtension.h"
+#import <MJExtension.h>
 @implementation TopicModel
+
+
+
++ (NSDictionary *)replacedKeyFromPropertyName
+{
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
+}
+
 
 - (NSString *)create_time
 {
@@ -53,10 +66,25 @@
             CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
         
         
-            _cellHeight = ZZTopicTextY + textH + ZZTopicBottomHeight + 2 * ZZTopicCellMargin;
-        //
+        _cellHeight = ZZTopicTextY + textH + ZZTopicBottomHeight;
         
         
+        //根据段子类型计算cell高度
+        
+        if (self.type == ZZTopicTypePicture) {
+            
+            CGFloat imageW = maxSize.width;
+            
+            CGFloat imageH = imageW * self.height / self.width;
+            
+            
+            _pictureViewFrame = CGRectMake(ZZTopicCellMargin,ZZTopicTextY + textH + ZZTopicCellMargin,imageW , imageH);
+            
+            _cellHeight += imageH +  ZZTopicCellMargin;
+            
+        }
+        
+        _cellHeight += ZZTopicCellMargin + ZZTopicBottomHeight;
         
     }
 

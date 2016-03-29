@@ -12,16 +12,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, ZZTopicType) {
-    
-    
-    ZZTopicTypeAll = 1,
-    ZZTopicTypePicture = 10,
-    ZZTopicTypeWord = 29,
-    ZZTopicTypeVoice = 31,
-    ZZTopicTypeVideo = 41
-    
-};
 
 
 @interface ZZTopicViewController : UITableViewController

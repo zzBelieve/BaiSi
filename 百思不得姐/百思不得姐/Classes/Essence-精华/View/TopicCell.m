@@ -10,6 +10,7 @@
 #import "TopicModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDate+ZZDateExtension.h"
+#import "ZZTopicPictureView.h"
 @interface TopicCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImgaeView;
@@ -26,9 +27,30 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sinaView;
 
 @property (weak, nonatomic) IBOutlet UILabel *myTextLabel;
+
+@property(nonatomic,weak)ZZTopicPictureView *pictureView;
+
 @end
 
 @implementation TopicCell
+
+
+- (ZZTopicPictureView *)pictureView{
+
+    if (!_pictureView) {
+        
+        
+       ZZTopicPictureView *pictureView = [ZZTopicPictureView PictureView];
+        
+       [self.contentView addSubview:pictureView];
+        
+        _pictureView = pictureView;
+        
+    }
+   
+    return _pictureView;
+
+}
 
 - (void)awakeFromNib {
     // Initialization code
@@ -37,6 +59,9 @@
     bg.image = [UIImage imageNamed:@"mainCellBackground"];
     
     self.backgroundView = bg;
+    
+    
+    
     
     
 }
@@ -64,6 +89,20 @@
     [self setButton:self.ShareButton count:model.repost placeholder:@"分享"];
     
     [self setButton:self.CommentButton count:model.comment placeholder:@"评论"];
+    
+    
+    //根据模型类型判断是否加载 pictureView
+    
+    if (model.type == ZZTopicTypePicture) {
+        
+        
+        self.pictureView.model = model;
+        
+        self.pictureView.frame = model.pictureViewFrame;
+        
+    }
+    
+    
 
 }
 

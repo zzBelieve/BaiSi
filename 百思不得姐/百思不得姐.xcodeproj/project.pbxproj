@@ -42,6 +42,8 @@
 		079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0797312F1CA28970000940CF /* LaunchScreen.storyboard */; };
 		0797313C1CA28970000940CF /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0797313B1CA28970000940CF /* _____Tests.m */; };
 		079731471CA28970000940CF /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731461CA28970000940CF /* _____UITests.m */; };
+		0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */; };
+		0799B6191CAA662C00D7CE9E /* ZZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */; };
 		07AE258C1CA3DA3700452BE7 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258B1CA3DA3700452BE7 /* RecommendModel.m */; };
 		07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258E1CA3DA7B00452BE7 /* RecommendLeftCell.m */; };
 		07AE25911CA3DA7B00452BE7 /* RecommendLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE258F1CA3DA7B00452BE7 /* RecommendLeftCell.xib */; };
@@ -140,6 +142,9 @@
 		079731421CA28970000940CF /* 百思不得姐UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079731461CA28970000940CF /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		079731481CA28970000940CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0799B6151CAA662000D7CE9E /* ZZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicPictureView.h; sourceTree = "<group>"; };
+		0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicPictureView.m; sourceTree = "<group>"; };
+		0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTopicPictureView.xib; sourceTree = "<group>"; };
 		07AE258A1CA3DA3700452BE7 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
 		07AE258B1CA3DA3700452BE7 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		07AE258D1CA3DA7B00452BE7 /* RecommendLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLeftCell.h; sourceTree = "<group>"; };
@@ -284,6 +289,9 @@
 				0769C7A71CA9066700D2882A /* TopicCell.h */,
 				0769C7A81CA9066700D2882A /* TopicCell.m */,
 				0769C7A91CA9066700D2882A /* TopicCell.xib */,
+				0799B6151CAA662000D7CE9E /* ZZTopicPictureView.h */,
+				0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */,
+				0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */,
+				0799B6191CAA662C00D7CE9E /* ZZTopicPictureView.xib in Resources */,
 				0720E2F41CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib in Resources */,
 				0720E2EF1CA4EDB900ACD947 /* ZZRecommandTagCell.xib in Resources */,
 				07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */,
@@ -689,6 +698,7 @@
 				0769C79A1CA8D07A00D2882A /* ZZVoiceTableViewController.m in Sources */,
 				077B928A1CA3C72E008767C3 /* UIView+ZZExtension.m in Sources */,
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,
+				0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */,
 				0769C7A31CA8FA5800D2882A /* TopicModel.m in Sources */,
 				0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */,
 				07AE25A31CA3EEA300452BE7 /* RecommendUserCell.m in Sources */,

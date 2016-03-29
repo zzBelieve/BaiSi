@@ -233,6 +233,8 @@ static NSString *const kcellid = @"topic";
     //    cell.textLabel.text = model.name;
     cell.model = model;
     
+    
+    
     return cell;
     
 }
@@ -246,18 +248,6 @@ static NSString *const kcellid = @"topic";
 
     TopicModel *model = self.dataArray[indexPath.row];
     
-    
-    
-    
-//    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * ZZTopicCellMargin, MAXFLOAT);
-//    
-//    CGFloat textH = [model.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
-//    
-//    
-//    CGFloat cellH = ZZTopicTextY + textH + ZZTopicBottomHeight + 2 * ZZTopicCellMargin;
-//    
- 
-
 
     return model.cellHeight;
 }

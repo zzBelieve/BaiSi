@@ -31,10 +31,27 @@
 @property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
 
 
+/** 图片的宽度 */
+@property (nonatomic, assign)CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign)CGFloat height;
 
+/** 小图片的URL */
+@property (nonatomic, copy) NSString *small_image;
+/** 中图片的URL */
+@property (nonatomic, copy) NSString *middle_image;
+/** 大图片的URL */
+@property (nonatomic, copy) NSString *large_image;
 
-/**辅助属性 */
+/** cell类型 */
 
+@property (nonatomic, assign) ZZTopicType type;
+
+/**辅助属性 cell高度*/
 @property (nonatomic, assign) CGFloat cellHeight;
+
+/**辅助属性 图片控制的frame*/
+@property (nonatomic, assign)CGRect pictureViewFrame;
+
 
 @end
