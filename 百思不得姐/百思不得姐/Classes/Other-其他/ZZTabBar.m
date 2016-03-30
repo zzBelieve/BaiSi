@@ -7,7 +7,7 @@
 //
 
 #import "ZZTabBar.h"
-
+#import "ZZPublishController.h"
 @interface ZZTabBar()
 
 
@@ -35,7 +35,7 @@
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
         
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:UIControlStateSelected];
-        
+        [publishButton addTarget:self action:@selector(publishButtonClick) forControlEvents:UIControlEventTouchUpInside];
         
         
         self.publishButton = publishButton;
@@ -52,6 +52,15 @@
 
 }
 
+
+- (void)publishButtonClick{
+
+    ZZPublishController *vc = [[ZZPublishController alloc] init];
+    
+
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
+
+}
 //在这设置frame
 - (void)layoutSubviews{
 

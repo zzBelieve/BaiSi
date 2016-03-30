@@ -78,6 +78,14 @@
             CGFloat imageH = imageW * self.height / self.width;
             
             
+            if (imageH > ZZTopicCellPictureViewMaxH) {
+                
+                imageH = ZZTopicCellPictureViewBreakH;
+                
+                self.bigImage = YES;
+            }
+            
+            
             _pictureViewFrame = CGRectMake(ZZTopicCellMargin,ZZTopicTextY + textH + ZZTopicCellMargin,imageW , imageH);
             
             _cellHeight += imageH +  ZZTopicCellMargin;

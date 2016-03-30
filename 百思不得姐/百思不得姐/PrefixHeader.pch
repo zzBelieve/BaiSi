@@ -32,4 +32,7 @@
 
 #import "ZZConst.h"
 
+#define ZZScreenWidth [UIScreen mainScreen].bounds.size.width
+
+#define ZZScreenHeight [UIScreen mainScreen].bounds.size.height
 #endif /* PrefixHeader_pch */

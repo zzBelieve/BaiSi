@@ -28,3 +28,7 @@ UIKIT_EXTERN CGFloat const ZZTitilesViewY;
 UIKIT_EXTERN CGFloat const ZZTopicCellMargin;
 UIKIT_EXTERN CGFloat const ZZTopicTextY;
 UIKIT_EXTERN CGFloat const ZZTopicBottomHeight;
+
+UIKIT_EXTERN CGFloat const ZZTopicCellPictureViewMaxH;
+
+UIKIT_EXTERN CGFloat const ZZTopicCellPictureViewBreakH;

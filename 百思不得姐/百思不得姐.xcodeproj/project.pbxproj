@@ -44,6 +44,11 @@
 		079731471CA28970000940CF /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731461CA28970000940CF /* _____UITests.m */; };
 		0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */; };
 		0799B6191CAA662C00D7CE9E /* ZZTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */; };
+		0799B61D1CAA794100D7CE9E /* ZZShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799B61B1CAA794100D7CE9E /* ZZShowPictureController.m */; };
+		0799B61E1CAA794100D7CE9E /* ZZShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0799B61C1CAA794100D7CE9E /* ZZShowPictureController.xib */; };
+		0799B6211CAA7A6200D7CE9E /* ZZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799B6201CAA7A6200D7CE9E /* ZZProgressView.m */; };
+		0799B6261CAA8B8400D7CE9E /* ZZPublishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0799B6241CAA8B8400D7CE9E /* ZZPublishController.m */; };
+		0799B6271CAA8B8400D7CE9E /* ZZPublishController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0799B6251CAA8B8400D7CE9E /* ZZPublishController.xib */; };
 		07AE258C1CA3DA3700452BE7 /* RecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258B1CA3DA3700452BE7 /* RecommendModel.m */; };
 		07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE258E1CA3DA7B00452BE7 /* RecommendLeftCell.m */; };
 		07AE25911CA3DA7B00452BE7 /* RecommendLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE258F1CA3DA7B00452BE7 /* RecommendLeftCell.xib */; };
@@ -145,6 +150,14 @@
 		0799B6151CAA662000D7CE9E /* ZZTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicPictureView.h; sourceTree = "<group>"; };
 		0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicPictureView.m; sourceTree = "<group>"; };
 		0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTopicPictureView.xib; sourceTree = "<group>"; };
+		0799B61A1CAA794100D7CE9E /* ZZShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZShowPictureController.h; sourceTree = "<group>"; };
+		0799B61B1CAA794100D7CE9E /* ZZShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZShowPictureController.m; sourceTree = "<group>"; };
+		0799B61C1CAA794100D7CE9E /* ZZShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZShowPictureController.xib; sourceTree = "<group>"; };
+		0799B61F1CAA7A6200D7CE9E /* ZZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZProgressView.h; sourceTree = "<group>"; };
+		0799B6201CAA7A6200D7CE9E /* ZZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZProgressView.m; sourceTree = "<group>"; };
+		0799B6231CAA8B8400D7CE9E /* ZZPublishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPublishController.h; sourceTree = "<group>"; };
+		0799B6241CAA8B8400D7CE9E /* ZZPublishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPublishController.m; sourceTree = "<group>"; };
+		0799B6251CAA8B8400D7CE9E /* ZZPublishController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZPublishController.xib; sourceTree = "<group>"; };
 		07AE258A1CA3DA3700452BE7 /* RecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendModel.h; sourceTree = "<group>"; };
 		07AE258B1CA3DA3700452BE7 /* RecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendModel.m; sourceTree = "<group>"; };
 		07AE258D1CA3DA7B00452BE7 /* RecommendLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLeftCell.h; sourceTree = "<group>"; };
@@ -265,6 +278,9 @@
 				0769C79F1CA8D08D00D2882A /* ZZWordTableViewController.m */,
 				0720E2E51CA4EBB500ACD947 /* ZZRecommendTagsViewController.h */,
 				0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */,
+				0799B61A1CAA794100D7CE9E /* ZZShowPictureController.h */,
+				0799B61B1CAA794100D7CE9E /* ZZShowPictureController.m */,
+				0799B61C1CAA794100D7CE9E /* ZZShowPictureController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +308,8 @@
 				0799B6151CAA662000D7CE9E /* ZZTopicPictureView.h */,
 				0799B6161CAA662000D7CE9E /* ZZTopicPictureView.m */,
 				0799B6181CAA662C00D7CE9E /* ZZTopicPictureView.xib */,
+				0799B61F1CAA7A6200D7CE9E /* ZZProgressView.h */,
+				0799B6201CAA7A6200D7CE9E /* ZZProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,6 +404,7 @@
 		077B927A1CA3C72E008767C3 /* Other-其他 */ = {
 			isa = PBXGroup;
 			children = (
+				0799B6221CAA8B6B00D7CE9E /* Controller */,
 				07AE259B1CA3ED7F00452BE7 /* Foundation+Log.m */,
 				077B927B1CA3C72E008767C3 /* ZZTabBar.h */,
 				077B927C1CA3C72E008767C3 /* ZZTabBar.m */,
@@ -473,6 +492,16 @@
 				079731481CA28970000940CF /* Info.plist */,
 			);
 			path = "百思不得姐UITests";
+			sourceTree = "<group>";
+		};
+		0799B6221CAA8B6B00D7CE9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0799B6231CAA8B8400D7CE9E /* ZZPublishController.h */,
+				0799B6241CAA8B8400D7CE9E /* ZZPublishController.m */,
+				0799B6251CAA8B8400D7CE9E /* ZZPublishController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		616D3ECA6D93CA9156DE057A /* Frameworks */ = {
@@ -602,8 +631,10 @@
 				077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */,
 				0799B6191CAA662C00D7CE9E /* ZZTopicPictureView.xib in Resources */,
 				0720E2F41CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib in Resources */,
+				0799B6271CAA8B8400D7CE9E /* ZZPublishController.xib in Resources */,
 				0720E2EF1CA4EDB900ACD947 /* ZZRecommandTagCell.xib in Resources */,
 				07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */,
+				0799B61E1CAA794100D7CE9E /* ZZShowPictureController.xib in Resources */,
 				079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */,
 				0769C7AB1CA9066700D2882A /* TopicCell.xib in Resources */,
 				0797312E1CA28970000940CF /* Assets.xcassets in Resources */,
@@ -684,6 +715,7 @@
 				077B92881CA3C72E008767C3 /* ZZTabBar.m in Sources */,
 				0769C7941CA8D03A00D2882A /* ZZAllTableViewController.m in Sources */,
 				0720E2F71CA52BAE00ACD947 /* ZZVerticalButton.m in Sources */,
+				0799B6211CAA7A6200D7CE9E /* ZZProgressView.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
 				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
 				0769C7A01CA8D08D00D2882A /* ZZWordTableViewController.m in Sources */,
@@ -713,6 +745,8 @@
 				077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */,
 				0769C7971CA8D07000D2882A /* ZZVideoTableViewController.m in Sources */,
 				079731231CA28970000940CF /* main.m in Sources */,
+				0799B61D1CAA794100D7CE9E /* ZZShowPictureController.m in Sources */,
+				0799B6261CAA8B8400D7CE9E /* ZZPublishController.m in Sources */,
 				0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */,
 				077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */,
 			);

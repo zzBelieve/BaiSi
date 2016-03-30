@@ -53,5 +53,6 @@
 /**辅助属性 图片控制的frame*/
 @property (nonatomic, assign)CGRect pictureViewFrame;
 
-
+/**辅助属性 图片太大*/
+@property (nonatomic, assign,getter=isBigImage)BOOL bigImage;
 @end
