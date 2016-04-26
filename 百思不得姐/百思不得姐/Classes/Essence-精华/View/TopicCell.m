@@ -11,6 +11,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDate+ZZDateExtension.h"
 #import "ZZTopicPictureView.h"
+#import "ZZTopicVoiceView.h"
 @interface TopicCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImgaeView;
@@ -30,6 +31,7 @@
 
 @property(nonatomic,weak)ZZTopicPictureView *pictureView;
 
+@property(nonatomic,weak)ZZTopicVoiceView *voiceView;
 @end
 
 @implementation TopicCell
@@ -50,6 +52,22 @@
    
     return _pictureView;
 
+}
+- (ZZTopicVoiceView *)voiceView{
+    
+    if (!_voiceView) {
+        
+        
+        ZZTopicVoiceView *voiceView = [ZZTopicVoiceView VoiceView];
+        
+        [self.contentView addSubview:voiceView];
+        
+        _voiceView = voiceView;
+        
+    }
+    
+    return _voiceView;
+    
 }
 
 - (void)awakeFromNib {
@@ -99,6 +117,13 @@
         self.pictureView.model = model;
         
         self.pictureView.frame = model.pictureViewFrame;
+        
+    }else if (model.type == ZZTopicTypeVoice) {
+        
+        
+        self.voiceView.model = model;
+        
+        self.voiceView.frame = model.voiceViewFrame;
         
     }
     

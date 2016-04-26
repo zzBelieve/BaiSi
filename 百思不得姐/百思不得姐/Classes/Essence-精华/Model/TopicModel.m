@@ -90,6 +90,20 @@
             
             _cellHeight += imageH +  ZZTopicCellMargin;
             
+            
+            
+        }else if (self.type == ZZTopicTypeVoice) {
+            
+           
+            CGFloat voiceX = ZZTopicCellMargin;
+            CGFloat voiceY = ZZTopicTextY + textH + ZZTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            
+            self.voiceViewFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            
+            _cellHeight += voiceH + ZZTopicCellMargin;
         }
         
         _cellHeight += ZZTopicCellMargin + ZZTopicBottomHeight;

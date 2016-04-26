@@ -7,7 +7,7 @@
 //
 
 #import "ZZTabBar.h"
-#import "ZZPublishController.h"
+#import "ZZPublishView.h"
 @interface ZZTabBar()
 
 
@@ -55,11 +55,11 @@
 
 - (void)publishButtonClick{
 
-    ZZPublishController *vc = [[ZZPublishController alloc] init];
     
-
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:NO completion:nil];
-
+    
+    [ZZPublishView Show];
+    
+                        
 }
 //在这设置frame
 - (void)layoutSubviews{

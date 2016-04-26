@@ -26,7 +26,10 @@
 @property (nonatomic, assign) NSInteger repost;
 /** 评论的数量 */
 @property (nonatomic, assign) NSInteger comment;
-
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 播放时长 */
+@property (nonatomic, assign) NSInteger voicetime;
 
 @property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
 
@@ -55,4 +58,9 @@
 
 /**辅助属性 图片太大*/
 @property (nonatomic, assign,getter=isBigImage)BOOL bigImage;
+
+
+
+/**辅助属性 声音控件的frame*/
+@property (nonatomic, assign)CGRect voiceViewFrame;
 @end

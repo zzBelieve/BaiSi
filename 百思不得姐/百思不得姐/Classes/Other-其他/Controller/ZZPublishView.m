@@ -1,12 +1,12 @@
 //
-//  ZZPublishController.m
+//  ZZPublishView.m
 //  百思不得姐
 //
 //  Created by ZZBelieve on 16/3/29.
 //  Copyright © 2016年 ZZBelieve. All rights reserved.
 //
 
-#import "ZZPublishController.h"
+#import "ZZPublishView.h"
 #import "ZZVerticalButton.h"
 #import <POP.h>
 
@@ -14,19 +14,44 @@
 static CGFloat const KAnimatioonDelay = 0.1;
 static CGFloat const kSpringFactory = 10;
 
-@interface ZZPublishController ()
+@interface ZZPublishView ()
 
 @end
 
-@implementation ZZPublishController
+@implementation ZZPublishView
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+
+
+
++ (instancetype)PublishView{
+
+
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+
+}
+
+static UIWindow *_window;
+
++ (void)Show{
+    
+    
+    
+    _window = [[UIWindow alloc] init];
+    _window.frame = [UIScreen mainScreen].bounds;
+    _window.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    _window.hidden = NO;
+    
+    
+    ZZPublishView *PublishView = [ZZPublishView PublishView];
+    PublishView.frame = _window.bounds;
+    [_window addSubview:PublishView];
+}
+- (void)awakeFromNib{
     // Do any additional setup after loading the view from its nib.
     
-    self.view.userInteractionEnabled = NO;
     
-    
+    // 不能被点击
+    self.userInteractionEnabled = NO;
    
     
     
@@ -72,7 +97,7 @@ static CGFloat const kSpringFactory = 10;
         CGFloat buttonEndY = buttonStartY + row * (buttonH + 10);
         
         CGFloat buttonBeginY = buttonEndY - ZZScreenHeight;
-        [self.view addSubview:button];
+        [self addSubview:button];
         
         
         
@@ -103,7 +128,7 @@ static CGFloat const kSpringFactory = 10;
     UIImageView *app_sloganImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
 //    app_sloganImageView.zz_Y = ZZScreenHeight * 0.2;
 //    app_sloganImageView.zz_CenterX = ZZScreenWidth * 0.5 ;
-    [self.view addSubview:app_sloganImageView];
+    [self addSubview:app_sloganImageView];
     
     //slogan动画
     
@@ -114,7 +139,9 @@ static CGFloat const kSpringFactory = 10;
     animation.springBounciness = kSpringFactory;
     animation.springSpeed = kSpringFactory;
     [animation setCompletionBlock:^(POPAnimation *ani, BOOL finish) {
-        self.view.userInteractionEnabled = YES;
+        
+        // 标语动画执行完毕, 恢复点击事件
+        self.userInteractionEnabled = YES;
     }];
     [app_sloganImageView pop_addAnimation:animation forKey:nil];
     
@@ -151,14 +178,17 @@ static CGFloat const kSpringFactory = 10;
 
 
 
-    self.view.userInteractionEnabled = YES;
+//    self.userInteractionEnabled = YES;
+    
+    // 不能被点击
+    self.userInteractionEnabled = NO;
     
     //    [self cancleButtonClick:];
     
-    int beginIndex = 2;
-    for (int i = beginIndex; i<self.view.subviews.count; i++) {
+    int beginIndex = 1;
+    for (int i = beginIndex; i<self.subviews.count; i++) {
         
-        UIView *subView = self.view.subviews[i];
+        UIView *subView = self.subviews[i];
         
         // 基本动画
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
@@ -168,10 +198,15 @@ static CGFloat const kSpringFactory = 10;
         [subView pop_addAnimation:anim forKey:nil];
         
         // 监听最后一个动画
-        if (i == self.view.subviews.count - 1) {
+        if (i == self.subviews.count - 1) {
             
             [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
-                [self dismissViewControllerAnimated:NO completion:nil];
+//                [self dismissViewControllerAnimated:NO completion:nil]
+                
+                [self removeFromSuperview];
+                
+                _window.hidden = YES;
+                _window = nil;
                 
                 // 执行传进来的completionBlock参数
                 //                if (completionBlock) {
@@ -188,13 +223,12 @@ static CGFloat const kSpringFactory = 10;
 
 
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+
 - (IBAction)cancleButtonClick:(id)sender {
     
-//    [self dismissViewControllerAnimated:NO completion:nil];
+
+    [self cancleBlock:nil];
     
     
 }
