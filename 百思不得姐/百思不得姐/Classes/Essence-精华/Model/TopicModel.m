@@ -60,7 +60,7 @@
 
     if (!_cellHeight) {
         
-        ZZLogFunc
+//        ZZLogFunc
             CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * ZZTopicCellMargin, MAXFLOAT);
         
             CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
@@ -104,7 +104,24 @@
             
             
             _cellHeight += voiceH + ZZTopicCellMargin;
+            
+            
+        }else if (self.type == ZZTopicTypeVideo) {
+
+            CGFloat videoX = ZZTopicCellMargin;
+            CGFloat videoY = ZZTopicTextY + textH + ZZTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            
+            self.videoViewFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            
+            _cellHeight += videoH + ZZTopicCellMargin;
+            
+            
+            
         }
+        
         
         _cellHeight += ZZTopicCellMargin + ZZTopicBottomHeight;
         

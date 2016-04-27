@@ -26,6 +26,8 @@
 		0769C7AB1CA9066700D2882A /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0769C7A91CA9066700D2882A /* TopicCell.xib */; };
 		0769C7AE1CA9269D00D2882A /* NSDate+ZZDateExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7AD1CA9269D00D2882A /* NSDate+ZZDateExtension.m */; };
 		0769C7B11CA93DF900D2882A /* ZZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */; };
+		0773FF561CD0880D006AA300 /* ZZTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0773FF551CD0880D006AA300 /* ZZTopicVideoView.m */; };
+		0773FF581CD08892006AA300 /* ZZTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0773FF571CD08892006AA300 /* ZZTopicVideoView.xib */; };
 		077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92651CA3C72E008767C3 /* ZZMeViewController.m */; };
 		077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B926B1CA3C72E008767C3 /* ZZEssenceViewController.m */; };
 		077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92711CA3C72E008767C3 /* ZZFriendViewController.m */; };
@@ -116,6 +118,9 @@
 		0769C7AD1CA9269D00D2882A /* NSDate+ZZDateExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZDateExtension.m"; sourceTree = "<group>"; };
 		0769C7AF1CA93DF900D2882A /* ZZTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicViewController.h; sourceTree = "<group>"; };
 		0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicViewController.m; sourceTree = "<group>"; };
+		0773FF541CD0880D006AA300 /* ZZTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicVideoView.h; sourceTree = "<group>"; };
+		0773FF551CD0880D006AA300 /* ZZTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicVideoView.m; sourceTree = "<group>"; };
+		0773FF571CD08892006AA300 /* ZZTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTopicVideoView.xib; sourceTree = "<group>"; };
 		077B925D1CA3BC33008767C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		077B92641CA3C72E008767C3 /* ZZMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMeViewController.h; sourceTree = "<group>"; };
 		077B92651CA3C72E008767C3 /* ZZMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeViewController.m; sourceTree = "<group>"; };
@@ -318,6 +323,9 @@
 				0785197E1CCF5F9B00951E2E /* ZZTopicVoiceView.h */,
 				0785197F1CCF5F9B00951E2E /* ZZTopicVoiceView.m */,
 				078519811CCF5FA600951E2E /* ZZTopicVoiceView.xib */,
+				0773FF541CD0880D006AA300 /* ZZTopicVideoView.h */,
+				0773FF551CD0880D006AA300 /* ZZTopicVideoView.m */,
+				0773FF571CD08892006AA300 /* ZZTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -636,6 +644,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0773FF581CD08892006AA300 /* ZZTopicVideoView.xib in Resources */,
 				077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */,
 				0799B6191CAA662C00D7CE9E /* ZZTopicPictureView.xib in Resources */,
 				0720E2F41CA51BEE00ACD947 /* ZZLoginRegisterViewController.xib in Resources */,
@@ -738,6 +747,7 @@
 				07AE25901CA3DA7B00452BE7 /* RecommendLeftCell.m in Sources */,
 				0769C7AE1CA9269D00D2882A /* NSDate+ZZDateExtension.m in Sources */,
 				0769C79A1CA8D07A00D2882A /* ZZVoiceTableViewController.m in Sources */,
+				0773FF561CD0880D006AA300 /* ZZTopicVideoView.m in Sources */,
 				077B928A1CA3C72E008767C3 /* UIView+ZZExtension.m in Sources */,
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,
 				0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */,

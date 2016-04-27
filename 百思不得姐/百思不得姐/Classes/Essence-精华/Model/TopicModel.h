@@ -28,8 +28,10 @@
 @property (nonatomic, assign) NSInteger comment;
 /** 播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
-/** 播放时长 */
+/** 音频播放时长 */
 @property (nonatomic, assign) NSInteger voicetime;
+/** 视频播放时长 */
+@property (nonatomic, assign) NSInteger videotime;
 
 @property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
 
@@ -63,4 +65,7 @@
 
 /**辅助属性 声音控件的frame*/
 @property (nonatomic, assign)CGRect voiceViewFrame;
+
+/**辅助属性 视频控件的frame*/
+@property (nonatomic, assign)CGRect videoViewFrame;
 @end

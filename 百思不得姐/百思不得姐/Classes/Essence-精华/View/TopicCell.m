@@ -12,6 +12,7 @@
 #import "NSDate+ZZDateExtension.h"
 #import "ZZTopicPictureView.h"
 #import "ZZTopicVoiceView.h"
+#import "ZZTopicVideoView.h"
 @interface TopicCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImgaeView;
@@ -32,6 +33,8 @@
 @property(nonatomic,weak)ZZTopicPictureView *pictureView;
 
 @property(nonatomic,weak)ZZTopicVoiceView *voiceView;
+
+@property(nonatomic,weak)ZZTopicVideoView *videoView;
 @end
 
 @implementation TopicCell
@@ -53,6 +56,24 @@
     return _pictureView;
 
 }
+- (ZZTopicVideoView *)videoView{
+
+
+    if (!_videoView) {
+        
+        ZZTopicVideoView *videoView = [ZZTopicVideoView VideoView];
+        
+        [self.contentView addSubview:videoView];
+        
+        _videoView = videoView;
+    }
+
+
+    return _videoView;
+
+
+}
+
 - (ZZTopicVoiceView *)voiceView{
     
     if (!_voiceView) {
@@ -69,6 +90,7 @@
     return _voiceView;
     
 }
+
 
 - (void)awakeFromNib {
     // Initialization code
@@ -113,6 +135,10 @@
     
     if (model.type == ZZTopicTypePicture) {
         
+        self.pictureView.hidden = NO;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
+        
         
         self.pictureView.model = model;
         
@@ -120,10 +146,28 @@
         
     }else if (model.type == ZZTopicTypeVoice) {
         
+        self.voiceView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.videoView.hidden = YES;
         
         self.voiceView.model = model;
         
         self.voiceView.frame = model.voiceViewFrame;
+        
+    }else if (model.type == ZZTopicTypeVideo) {
+        self.videoView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        
+        self.videoView.model = model;
+        
+        self.videoView.frame = model.videoViewFrame;
+        
+    }else {
+        
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+        self.videoView.hidden = YES;
         
     }
     
