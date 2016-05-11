@@ -14,6 +14,7 @@
 #import "TopicCell.h"
 #import "ZZConst.h"
 #import "ZZCommentViewController.h"
+#import "ZZNewViewController.h"
 @interface ZZTopicViewController ()
 
 
@@ -136,6 +137,11 @@ static NSString *const kcellid = @"topic";
     
 }
 
+- (NSString *)a{
+
+    return [self.parentViewController isKindOfClass:[ZZNewViewController class]] ? @"newlist" : @"list";
+
+}
 - (void)loadMoreData{
     
     // 结束刷新
@@ -147,7 +153,7 @@ static NSString *const kcellid = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     NSInteger page = self.page + 1;
@@ -206,7 +212,7 @@ static NSString *const kcellid = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     
