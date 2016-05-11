@@ -37,7 +37,7 @@
     UIView *headerView = [[UIView alloc] init];
     
     
-    TopicCell *cell = [TopicCell cell];
+    TopicCell *cell = [TopicCell viewFromXib];
     
     cell.model = self.model;
     

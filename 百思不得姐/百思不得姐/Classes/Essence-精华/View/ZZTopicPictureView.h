@@ -12,9 +12,6 @@
 @interface ZZTopicPictureView : UIView
 
 
-+ (instancetype)PictureView;
-
-
 @property(nonatomic,strong)TopicModel *model;
 
 @end

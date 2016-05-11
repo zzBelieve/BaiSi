@@ -10,9 +10,6 @@
 @class TopicModel;
 @interface ZZTopicVoiceView : UIView
 
-
-+ (instancetype)VoiceView;
-
 @property(nonatomic,strong)TopicModel *model;
 
 

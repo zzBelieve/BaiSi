@@ -11,10 +11,6 @@
 @class TopicModel;
 @interface ZZTopicVideoView : UIView
 
-
-
-+ (instancetype)VideoView;
-
 @property(nonatomic,strong)TopicModel *model;
 
 

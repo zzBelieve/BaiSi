@@ -22,14 +22,6 @@ static CGFloat const kSpringFactory = 10;
 
 
 
-
-+ (instancetype)PublishView{
-
-
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-
-}
-
 static UIWindow *_window;
 
 + (void)Show{
@@ -42,7 +34,7 @@ static UIWindow *_window;
     _window.hidden = NO;
     
     
-    ZZPublishView *PublishView = [ZZPublishView PublishView];
+    ZZPublishView *PublishView = [ZZPublishView viewFromXib];
     PublishView.frame = _window.bounds;
     [_window addSubview:PublishView];
 }

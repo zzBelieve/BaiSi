@@ -13,6 +13,8 @@
 		0712432D1CE3152500652027 /* ZZMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712432C1CE3152500652027 /* ZZMeFooterView.m */; };
 		071243301CE315FC00652027 /* ZZMeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712432F1CE315FC00652027 /* ZZMeModel.m */; };
 		071243331CE316BD00652027 /* ZZSqaureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243321CE316BD00652027 /* ZZSqaureButton.m */; };
+		0712433A1CE31C4000652027 /* ZZPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243391CE31C4000652027 /* ZZPostWordViewController.m */; };
+		0712433D1CE33E2800652027 /* ZZPlaceHolderTextview.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712433C1CE33E2800652027 /* ZZPlaceHolderTextview.m */; };
 		0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */; };
 		0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */; };
 		0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */; };
@@ -73,6 +75,10 @@
 		07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07AE25A21CA3EEA300452BE7 /* RecommendUserCell.xib */; };
 		07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AE25A61CA3F23200452BE7 /* RecommendUserModel.m */; };
 		2289E5D02AE9F0CEE9F298CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE682549ACF745913078236A /* libPods.a */; };
+		BD57BAD11CE364EA00B70999 /* ZZaddTagToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57BAD01CE364EA00B70999 /* ZZaddTagToolView.m */; };
+		BD57BAD31CE364FA00B70999 /* ZZaddTagToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD57BAD21CE364FA00B70999 /* ZZaddTagToolView.xib */; };
+		BD57BAD61CE36DF300B70999 /* ZZAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57BAD51CE36DF300B70999 /* ZZAddTagViewController.m */; };
+		BD57BAD91CE37F9400B70999 /* ZZTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BD57BAD81CE37F9400B70999 /* ZZTagButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +111,10 @@
 		0712432F1CE315FC00652027 /* ZZMeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeModel.m; sourceTree = "<group>"; };
 		071243311CE316BD00652027 /* ZZSqaureButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSqaureButton.h; sourceTree = "<group>"; };
 		071243321CE316BD00652027 /* ZZSqaureButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSqaureButton.m; sourceTree = "<group>"; };
+		071243381CE31C4000652027 /* ZZPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPostWordViewController.h; sourceTree = "<group>"; };
+		071243391CE31C4000652027 /* ZZPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPostWordViewController.m; sourceTree = "<group>"; };
+		0712433B1CE33E2800652027 /* ZZPlaceHolderTextview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPlaceHolderTextview.h; sourceTree = "<group>"; };
+		0712433C1CE33E2800652027 /* ZZPlaceHolderTextview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPlaceHolderTextview.m; sourceTree = "<group>"; };
 		0720E2E51CA4EBB500ACD947 /* ZZRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommendTagsViewController.h; sourceTree = "<group>"; };
 		0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommendTagsViewController.m; sourceTree = "<group>"; };
 		0720E2E81CA4ED0200ACD947 /* RecommedTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommedTagsModel.h; sourceTree = "<group>"; };
@@ -213,6 +223,13 @@
 		07AE25A61CA3F23200452BE7 /* RecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendUserModel.m; sourceTree = "<group>"; };
 		0ED30F7280D1B9E7BA760928 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		55D1141879DDF69D408B43DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BD57BACF1CE364EA00B70999 /* ZZaddTagToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZaddTagToolView.h; sourceTree = "<group>"; };
+		BD57BAD01CE364EA00B70999 /* ZZaddTagToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZaddTagToolView.m; sourceTree = "<group>"; };
+		BD57BAD21CE364FA00B70999 /* ZZaddTagToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZaddTagToolView.xib; sourceTree = "<group>"; };
+		BD57BAD41CE36DF300B70999 /* ZZAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZAddTagViewController.h; sourceTree = "<group>"; };
+		BD57BAD51CE36DF300B70999 /* ZZAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZAddTagViewController.m; sourceTree = "<group>"; };
+		BD57BAD71CE37F9400B70999 /* ZZTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTagButton.h; sourceTree = "<group>"; };
+		BD57BAD81CE37F9400B70999 /* ZZTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTagButton.m; sourceTree = "<group>"; };
 		EE682549ACF745913078236A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,9 +259,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071243341CE31BA500652027 /* Publish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				071243351CE31BA500652027 /* Controller */,
+				071243361CE31BA500652027 /* model */,
+				071243371CE31BA500652027 /* view */,
+			);
+			path = "Publish-发布";
+			sourceTree = "<group>";
+		};
+		071243351CE31BA500652027 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				071243381CE31C4000652027 /* ZZPostWordViewController.h */,
+				071243391CE31C4000652027 /* ZZPostWordViewController.m */,
+				BD57BAD41CE36DF300B70999 /* ZZAddTagViewController.h */,
+				BD57BAD51CE36DF300B70999 /* ZZAddTagViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		071243361CE31BA500652027 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		071243371CE31BA500652027 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				0712433B1CE33E2800652027 /* ZZPlaceHolderTextview.h */,
+				0712433C1CE33E2800652027 /* ZZPlaceHolderTextview.m */,
+				BD57BACF1CE364EA00B70999 /* ZZaddTagToolView.h */,
+				BD57BAD01CE364EA00B70999 /* ZZaddTagToolView.m */,
+				BD57BAD21CE364FA00B70999 /* ZZaddTagToolView.xib */,
+				BD57BAD71CE37F9400B70999 /* ZZTagButton.h */,
+				BD57BAD81CE37F9400B70999 /* ZZTagButton.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		077B92611CA3C72E008767C3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				071243341CE31BA500652027 /* Publish-发布 */,
 				077B92621CA3C72E008767C3 /* Me-我 */,
 				077B92681CA3C72E008767C3 /* Essence-精华 */,
 				077B926E1CA3C72E008767C3 /* FriendTrends-关注 */,
@@ -699,6 +759,7 @@
 				0799B6271CAA8B8400D7CE9E /* ZZPublishView.xib in Resources */,
 				0720E2EF1CA4EDB900ACD947 /* ZZRecommandTagCell.xib in Resources */,
 				07AE25A41CA3EEA300452BE7 /* RecommendUserCell.xib in Resources */,
+				BD57BAD31CE364FA00B70999 /* ZZaddTagToolView.xib in Resources */,
 				0799B61E1CAA794100D7CE9E /* ZZShowPictureController.xib in Resources */,
 				078519821CCF5FA600951E2E /* ZZTopicVoiceView.xib in Resources */,
 				079731311CA28970000940CF /* LaunchScreen.storyboard in Resources */,
@@ -786,12 +847,15 @@
 				0799B6211CAA7A6200D7CE9E /* ZZProgressView.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
 				071243241CE2DDED00652027 /* ZZTopWindow.m in Sources */,
+				0712433D1CE33E2800652027 /* ZZPlaceHolderTextview.m in Sources */,
 				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
 				0773FF5B1CD09E0A006AA300 /* UserModel.m in Sources */,
+				BD57BAD91CE37F9400B70999 /* ZZTagButton.m in Sources */,
 				0769C7A01CA8D08D00D2882A /* ZZWordTableViewController.m in Sources */,
 				0773FF5E1CD09F03006AA300 /* CommentModel.m in Sources */,
 				077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */,
 				077B92891CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m in Sources */,
+				BD57BAD11CE364EA00B70999 /* ZZaddTagToolView.m in Sources */,
 				078519801CCF5F9B00951E2E /* ZZTopicVoiceView.m in Sources */,
 				0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */,
 				0769C7B11CA93DF900D2882A /* ZZTopicViewController.m in Sources */,
@@ -803,6 +867,7 @@
 				0773FF561CD0880D006AA300 /* ZZTopicVideoView.m in Sources */,
 				077B928A1CA3C72E008767C3 /* UIView+ZZExtension.m in Sources */,
 				0712432D1CE3152500652027 /* ZZMeFooterView.m in Sources */,
+				0712433A1CE31C4000652027 /* ZZPostWordViewController.m in Sources */,
 				0712432A1CE3120D00652027 /* ZZMeCell.m in Sources */,
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,
 				0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */,
@@ -823,6 +888,7 @@
 				079731231CA28970000940CF /* main.m in Sources */,
 				0799B61D1CAA794100D7CE9E /* ZZShowPictureController.m in Sources */,
 				0799B6261CAA8B8400D7CE9E /* ZZPublishView.m in Sources */,
+				BD57BAD61CE36DF300B70999 /* ZZAddTagViewController.m in Sources */,
 				071243331CE316BD00652027 /* ZZSqaureButton.m in Sources */,
 				071243271CE2F87400652027 /* UIImage+ZZExtension.m in Sources */,
 				0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */,

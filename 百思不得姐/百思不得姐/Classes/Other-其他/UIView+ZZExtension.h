@@ -27,4 +27,7 @@
 
 
 - (BOOL)isShowInKeyWindow;
+
+
++ (instancetype)viewFromXib;
 @end

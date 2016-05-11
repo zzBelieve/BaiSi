@@ -26,14 +26,6 @@
 
 @implementation ZZTopicVoiceView
 
-+ (instancetype)VoiceView{
-    
-    
-    
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-    
-}
-
 
 - (void)awakeFromNib{
     

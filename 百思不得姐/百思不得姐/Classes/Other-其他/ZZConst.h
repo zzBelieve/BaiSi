@@ -41,3 +41,7 @@ UIKIT_EXTERN NSString *const ZZUserSexFemale;
 
 /** TabBar被选中的通知 */
 UIKIT_EXTERN NSString *const ZZTabBarDidSelectNotication;
+
+
+
+UIKIT_EXTERN CGFloat const ZZTagMargin;

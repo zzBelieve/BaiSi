@@ -66,18 +66,18 @@
     return self;
 }
 
-//- (void)layoutSubviews{
-//
-//    [super layoutSubviews];
-//    
-//    
-//    self.placeHodlerLabel.zz_Width = [UIScreen mainScreen].bounds.size.width - self.placeHodlerLabel.zz_X * 2;
-//    
-//
-//
-//
-//
-//}
+- (void)layoutSubviews{
+
+    [super layoutSubviews];
+    
+    
+    self.placeHodlerLabel.zz_Width = [UIScreen mainScreen].bounds.size.width - self.placeHodlerLabel.zz_X * 2;
+    
+
+    [self.placeHodlerLabel sizeToFit];
+
+
+}
 
 - (void)textDidChange{
 
@@ -105,7 +105,7 @@
     
     
     
-    [self updatePlaceHolderSize];
+    [self setNeedsLayout];
     
 
 }
@@ -131,7 +131,8 @@
     
     self.placeHodlerLabel.font = font;
     
-    [self updatePlaceHolderSize];
+    [self setNeedsLayout];
+//    [self updatePlaceHolderSize];
     
 }
 

@@ -23,7 +23,20 @@
      [appearance setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
     
      appearance.tintColor = [UIColor redColor];
-
+    
+    
+    
+    NSMutableDictionary *normalAttr = [NSMutableDictionary dictionary];
+    normalAttr[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    normalAttr[NSForegroundColorAttributeName] = [UIColor blackColor];
+    
+    NSMutableDictionary *disAableAttr = [NSMutableDictionary dictionary];
+    disAableAttr[NSFontAttributeName] = [UIFont systemFontOfSize:15];
+    disAableAttr[NSForegroundColorAttributeName] = [UIColor grayColor];
+    
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    [item setTitleTextAttributes:normalAttr forState:UIControlStateNormal];
+    [item setTitleTextAttributes:disAableAttr forState:UIControlStateDisabled];
 
 }
 

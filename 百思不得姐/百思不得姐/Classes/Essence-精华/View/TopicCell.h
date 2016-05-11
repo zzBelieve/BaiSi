@@ -13,8 +13,6 @@
 
 @interface TopicCell : UITableViewCell
 
-+ (instancetype)cell;
-
 @property(nonatomic,strong)TopicModel *model;
 
 @end

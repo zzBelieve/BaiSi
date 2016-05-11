@@ -18,3 +18,6 @@ CGFloat const ZZTopicCellPictureViewBreakH = 250;
 
 
 NSString *const ZZTabBarDidSelectNotication = @"ZZTabBarDidSelectNotication";
+
+
+CGFloat const ZZTagMargin = 5;

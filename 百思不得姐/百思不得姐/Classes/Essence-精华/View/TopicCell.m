@@ -45,21 +45,12 @@
 @implementation TopicCell
 
 
-+ (instancetype)cell{
-
-
-
-  return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-
-
-}
-
 - (ZZTopicPictureView *)pictureView{
 
     if (!_pictureView) {
         
         
-       ZZTopicPictureView *pictureView = [ZZTopicPictureView PictureView];
+       ZZTopicPictureView *pictureView = [ZZTopicPictureView viewFromXib];
         
        [self.contentView addSubview:pictureView];
         
@@ -75,7 +66,7 @@
 
     if (!_videoView) {
         
-        ZZTopicVideoView *videoView = [ZZTopicVideoView VideoView];
+        ZZTopicVideoView *videoView = [ZZTopicVideoView viewFromXib];
         
         [self.contentView addSubview:videoView];
         
@@ -93,7 +84,7 @@
     if (!_voiceView) {
         
         
-        ZZTopicVoiceView *voiceView = [ZZTopicVoiceView VoiceView];
+        ZZTopicVoiceView *voiceView = [ZZTopicVoiceView viewFromXib];
         
         [self.contentView addSubview:voiceView];
         
