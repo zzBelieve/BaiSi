@@ -15,6 +15,7 @@
 #import "ZZTopicPictureView.h"
 #import "ZZTopicVoiceView.h"
 #import "ZZTopicVideoView.h"
+#import "UIImage+ZZExtension.h"
 @interface TopicCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImgaeView;
@@ -124,7 +125,12 @@
     _model = model;
     
     
-    [self.headImgaeView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.profile_image]] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headImgaeView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",model.profile_image]] placeholderImage:[[UIImage imageNamed:@"defaultUserIcon"] circleImage] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+        
+        self.headImgaeView.image = [image circleImage];
+        
+    }];
     
 
     self.nickName.text = model.name;

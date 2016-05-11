@@ -18,7 +18,7 @@ static UIWindow *_window;
     
     _window  =[[UIWindow alloc] initWithFrame:CGRectMake(0, 0, ZZScreenWidth, 20)];
     _window.windowLevel = UIWindowLevelAlert;
-    _window.backgroundColor = [UIColor redColor];
+//    _window.backgroundColor = [UIColor redColor];
 //    _window.rootViewController = [[UIViewController alloc] init];
 
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		071243241CE2DDED00652027 /* ZZTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243231CE2DDED00652027 /* ZZTopWindow.m */; };
+		071243271CE2F87400652027 /* UIImage+ZZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243261CE2F87400652027 /* UIImage+ZZExtension.m */; };
 		0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */; };
 		0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */; };
 		0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */; };
@@ -90,6 +91,8 @@
 /* Begin PBXFileReference section */
 		071243221CE2DDED00652027 /* ZZTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopWindow.h; sourceTree = "<group>"; };
 		071243231CE2DDED00652027 /* ZZTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopWindow.m; sourceTree = "<group>"; };
+		071243251CE2F87400652027 /* UIImage+ZZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZZExtension.h"; sourceTree = "<group>"; };
+		071243261CE2F87400652027 /* UIImage+ZZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZZExtension.m"; sourceTree = "<group>"; };
 		0720E2E51CA4EBB500ACD947 /* ZZRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommendTagsViewController.h; sourceTree = "<group>"; };
 		0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommendTagsViewController.m; sourceTree = "<group>"; };
 		0720E2E81CA4ED0200ACD947 /* RecommedTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommedTagsModel.h; sourceTree = "<group>"; };
@@ -451,6 +454,8 @@
 				077B927E1CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m */,
 				077B927F1CA3C72E008767C3 /* UIView+ZZExtension.h */,
 				077B92801CA3C72E008767C3 /* UIView+ZZExtension.m */,
+				071243251CE2F87400652027 /* UIImage+ZZExtension.h */,
+				071243261CE2F87400652027 /* UIImage+ZZExtension.m */,
 				0769C7A41CA9029600D2882A /* ZZConst.h */,
 				0769C7A51CA9029600D2882A /* ZZConst.m */,
 				0769C7AC1CA9269D00D2882A /* NSDate+ZZDateExtension.h */,
@@ -795,6 +800,7 @@
 				079731231CA28970000940CF /* main.m in Sources */,
 				0799B61D1CAA794100D7CE9E /* ZZShowPictureController.m in Sources */,
 				0799B6261CAA8B8400D7CE9E /* ZZPublishView.m in Sources */,
+				071243271CE2F87400652027 /* UIImage+ZZExtension.m in Sources */,
 				0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */,
 				077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */,
 			);
