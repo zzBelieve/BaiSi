@@ -9,8 +9,8 @@
 #import "ZZPublishView.h"
 #import "ZZVerticalButton.h"
 #import <POP.h>
-
-
+#import "ZZPostWordViewController.h"
+#import "ZZMainNavgationController.h"
 static CGFloat const KAnimatioonDelay = 0.1;
 static CGFloat const kSpringFactory = 10;
 
@@ -156,9 +156,18 @@ static UIWindow *_window;
     
     [self cancleBlock:^{
         
-        if (button.tag == 100) {
+        //发段子
+        
+        if (button.tag == 102) {
             
             ZZLogFunc
+            
+            ZZPostWordViewController *vc = [[ZZPostWordViewController alloc] init];
+            ZZMainNavgationController *nav = [[ZZMainNavgationController alloc] initWithRootViewController:vc];
+            
+            
+            UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [root presentViewController:nav animated:YES completion:nil];
         }
         
         
