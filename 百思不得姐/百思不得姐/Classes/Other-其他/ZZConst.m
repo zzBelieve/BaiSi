@@ -17,6 +17,4 @@ CGFloat const ZZTopicCellPictureViewMaxH = 1000;
 CGFloat const ZZTopicCellPictureViewBreakH = 250;
 
 
-
-NSString *const ZZUserSexMale = @"m";
-NSString *const ZZUserSexFemale = @"f";
+NSString *const ZZTabBarDidSelectNotication = @"ZZTabBarDidSelectNotication";

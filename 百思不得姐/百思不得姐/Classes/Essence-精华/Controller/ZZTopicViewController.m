@@ -27,6 +27,8 @@
 /** 上一次的请求参数 */
 @property (nonatomic, strong) NSDictionary *params;
 
+/** 上一次选中的索引 */
+@property(nonatomic,assign)NSInteger lastSelectIndex;
 @end
 
 @implementation ZZTopicViewController
@@ -57,6 +59,11 @@ static NSString *const kcellid = @"topic";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    //监听通知
+    
+    [ZZNotificationCenter addObserver:self selector:@selector(tabClick) name:ZZTabBarDidSelectNotication object:nil];
+    
+    
     self.view.backgroundColor = ZZRGBColor(224, 224, 224);
     
     [self setUpTableView];
@@ -65,6 +72,34 @@ static NSString *const kcellid = @"topic";
     [self setUpFefresh];
 }
 
+
+- (void)tabClick{
+
+
+    
+ 
+//    if (self.tabBarController.selectedViewController != self.navigationController) return;
+    
+    
+    if (self.lastSelectIndex == self.tabBarController.selectedIndex && self.view.isShowInKeyWindow){
+    
+    
+        
+        [self.tableView.mj_header beginRefreshing];
+    
+        
+    }
+    
+    
+    self.lastSelectIndex = self.tabBarController.selectedIndex;
+    
+    
+
+    
+
+
+
+}
 - (void)setUpTableView{
     
     

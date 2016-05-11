@@ -36,5 +36,7 @@
 
 #define ZZScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define ZZNotificationCenter [NSNotificationCenter defaultCenter]
+
 #define ZZRootView [UIApplication sharedApplication].keyWindow.rootViewController.view
 #endif /* PrefixHeader_pch */

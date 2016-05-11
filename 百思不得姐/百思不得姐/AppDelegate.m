@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ZZMainTabBarViewController.h"
 #import "ZZTopWindow.h"
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -26,8 +26,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.backgroundColor = [UIColor whiteColor];
-    
-    self.window.rootViewController = [[ZZMainTabBarViewController alloc] init];
+    ZZMainTabBarViewController *tabBar = [[ZZMainTabBarViewController alloc] init];
+    tabBar.delegate = self;
+    self.window.rootViewController = tabBar;
     
     
     [self.window makeKeyAndVisible];
@@ -63,4 +64,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+
+   
+   
+   //发通知
+    [ZZNotificationCenter postNotificationName:ZZTabBarDidSelectNotication object:nil];
+
+
+}
 @end
