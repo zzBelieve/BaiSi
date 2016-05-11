@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071243241CE2DDED00652027 /* ZZTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243231CE2DDED00652027 /* ZZTopWindow.m */; };
 		0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */; };
 		0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */; };
 		0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */; };
@@ -87,6 +88,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071243221CE2DDED00652027 /* ZZTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopWindow.h; sourceTree = "<group>"; };
+		071243231CE2DDED00652027 /* ZZTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopWindow.m; sourceTree = "<group>"; };
 		0720E2E51CA4EBB500ACD947 /* ZZRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommendTagsViewController.h; sourceTree = "<group>"; };
 		0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommendTagsViewController.m; sourceTree = "<group>"; };
 		0720E2E81CA4ED0200ACD947 /* RecommedTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommedTagsModel.h; sourceTree = "<group>"; };
@@ -440,6 +443,8 @@
 			children = (
 				0799B6221CAA8B6B00D7CE9E /* Controller */,
 				07AE259B1CA3ED7F00452BE7 /* Foundation+Log.m */,
+				071243221CE2DDED00652027 /* ZZTopWindow.h */,
+				071243231CE2DDED00652027 /* ZZTopWindow.m */,
 				077B927B1CA3C72E008767C3 /* ZZTabBar.h */,
 				077B927C1CA3C72E008767C3 /* ZZTabBar.m */,
 				077B927D1CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.h */,
@@ -755,6 +760,7 @@
 				0720E2F71CA52BAE00ACD947 /* ZZVerticalButton.m in Sources */,
 				0799B6211CAA7A6200D7CE9E /* ZZProgressView.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
+				071243241CE2DDED00652027 /* ZZTopWindow.m in Sources */,
 				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
 				0773FF5B1CD09E0A006AA300 /* UserModel.m in Sources */,
 				0769C7A01CA8D08D00D2882A /* ZZWordTableViewController.m in Sources */,

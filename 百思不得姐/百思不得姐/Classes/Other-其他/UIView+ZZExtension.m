@@ -143,4 +143,17 @@
    return self.center.y;
 
 }
+- (BOOL)isShowInKeyWindow{
+
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect windowFrame = keyWindow.frame;
+    
+    BOOL inter =  CGRectIntersectsRect(newFrame, windowFrame);
+
+    return !self.hidden && self.alpha>0.01 && self.window==keyWindow && inter;
+
+
+}
 @end

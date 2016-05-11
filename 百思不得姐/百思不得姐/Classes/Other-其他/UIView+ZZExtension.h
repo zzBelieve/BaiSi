@@ -24,4 +24,7 @@
 @property(nonatomic,assign)CGFloat zz_CenterX;
 @property(nonatomic,assign)CGFloat zz_CenterY;
 
+
+
+- (BOOL)isShowInKeyWindow;
 @end
