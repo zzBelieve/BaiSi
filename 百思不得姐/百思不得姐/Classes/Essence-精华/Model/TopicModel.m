@@ -80,7 +80,7 @@
             CGFloat textH = [self.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
         
         
-        _cellHeight = ZZTopicTextY + textH + ZZTopicBottomHeight;
+        _cellHeight = ZZTopicTextY + textH + ZZTopicCellMargin;
         
         
         //根据段子类型计算cell高度
@@ -147,7 +147,7 @@
             CGFloat textH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
             
             
-            _cellHeight += textH + 20;
+            _cellHeight += textH + 20 + 10;
             
         }
         

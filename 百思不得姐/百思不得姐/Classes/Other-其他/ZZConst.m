@@ -12,7 +12,7 @@ CGFloat const ZZTopicBottomHeight = 30;
 
 
 
-CGFloat const ZZTopicCellPictureViewMaxH = 1500;
+CGFloat const ZZTopicCellPictureViewMaxH = 1000;
 
 CGFloat const ZZTopicCellPictureViewBreakH = 250;
 

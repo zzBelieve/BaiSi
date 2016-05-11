@@ -34,13 +34,29 @@
 - (void)makeHeader{
 
 
+    UIView *headerView = [[UIView alloc] init];
+    
+    
     TopicCell *cell = [TopicCell cell];
     
     cell.model = self.model;
     
-    cell.zz_Height = self.model.cellHeight;
+    [headerView addSubview:cell];
     
-    self.tableView.tableHeaderView = cell;
+    cell.zz_size = CGSizeMake(ZZScreenWidth, self.model.cellHeight);
+    
+//    cell.zz_Height = self.model.cellHeight;
+//    cell.zz_Width = ZZScreenWidth;
+    
+    headerView.zz_Height = self.model.cellHeight + ZZTopicTextY + 100;
+    
+    self.tableView.tableHeaderView = headerView;
+    
+    
+   
+//    cell.zz_Height = self.model.cellHeight + 10;
+    
+    
 
 
 
@@ -117,8 +133,6 @@
 
 
 }
-
-
 
 
 

@@ -236,6 +236,8 @@
     
     frame.size.height -= margin;
     
+//    frame.size.height = self.model.cellHeight - ZZTopicCellMargin;
+    
     frame.origin.y += margin;
 
     [super setFrame:frame];
