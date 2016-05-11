@@ -60,7 +60,7 @@
     
     [self addChildVc:[[ZZFriendViewController alloc] init] title:@"关注" imageName:@"tabBar_friendTrends_icon" SelectimageName:@"tabBar_friendTrends_click_icon"];
     
-    [self addChildVc:[[ZZMeViewController alloc] init] title:@"我" imageName:@"tabBar_me_icon" SelectimageName:@"tabBar_me_click_icon"];
+    [self addChildVc:[[ZZMeViewController alloc] initWithStyle:UITableViewStyleGrouped] title:@"我" imageName:@"tabBar_me_icon" SelectimageName:@"tabBar_me_click_icon"];
     
     
     //更换tabbar
