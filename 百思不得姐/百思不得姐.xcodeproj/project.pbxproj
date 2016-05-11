@@ -28,6 +28,8 @@
 		0769C7B11CA93DF900D2882A /* ZZTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769C7B01CA93DF900D2882A /* ZZTopicViewController.m */; };
 		0773FF561CD0880D006AA300 /* ZZTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0773FF551CD0880D006AA300 /* ZZTopicVideoView.m */; };
 		0773FF581CD08892006AA300 /* ZZTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0773FF571CD08892006AA300 /* ZZTopicVideoView.xib */; };
+		0773FF5B1CD09E0A006AA300 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0773FF5A1CD09E0A006AA300 /* UserModel.m */; };
+		0773FF5E1CD09F03006AA300 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0773FF5D1CD09F03006AA300 /* CommentModel.m */; };
 		077B92841CA3C72E008767C3 /* ZZMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92651CA3C72E008767C3 /* ZZMeViewController.m */; };
 		077B92851CA3C72E008767C3 /* ZZEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B926B1CA3C72E008767C3 /* ZZEssenceViewController.m */; };
 		077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 077B92711CA3C72E008767C3 /* ZZFriendViewController.m */; };
@@ -40,6 +42,8 @@
 		077B92901CA3CC7D008767C3 /* ZZFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 077B928F1CA3CC7D008767C3 /* ZZFriendViewController.xib */; };
 		078519801CCF5F9B00951E2E /* ZZTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0785197F1CCF5F9B00951E2E /* ZZTopicVoiceView.m */; };
 		078519821CCF5FA600951E2E /* ZZTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078519811CCF5FA600951E2E /* ZZTopicVoiceView.xib */; };
+		07856B001CD8973100D0AA50 /* ZZCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07856AFE1CD8973100D0AA50 /* ZZCommentViewController.m */; };
+		07856B011CD8973100D0AA50 /* ZZCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07856AFF1CD8973100D0AA50 /* ZZCommentViewController.xib */; };
 		079731231CA28970000940CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731221CA28970000940CF /* main.m */; };
 		079731261CA28970000940CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 079731251CA28970000940CF /* AppDelegate.m */; };
 		0797312E1CA28970000940CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0797312D1CA28970000940CF /* Assets.xcassets */; };
@@ -121,6 +125,10 @@
 		0773FF541CD0880D006AA300 /* ZZTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicVideoView.h; sourceTree = "<group>"; };
 		0773FF551CD0880D006AA300 /* ZZTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicVideoView.m; sourceTree = "<group>"; };
 		0773FF571CD08892006AA300 /* ZZTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTopicVideoView.xib; sourceTree = "<group>"; };
+		0773FF591CD09E0A006AA300 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		0773FF5A1CD09E0A006AA300 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		0773FF5C1CD09F03006AA300 /* CommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentModel.h; sourceTree = "<group>"; };
+		0773FF5D1CD09F03006AA300 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		077B925D1CA3BC33008767C3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		077B92641CA3C72E008767C3 /* ZZMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMeViewController.h; sourceTree = "<group>"; };
 		077B92651CA3C72E008767C3 /* ZZMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMeViewController.m; sourceTree = "<group>"; };
@@ -144,6 +152,9 @@
 		0785197E1CCF5F9B00951E2E /* ZZTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTopicVoiceView.h; sourceTree = "<group>"; };
 		0785197F1CCF5F9B00951E2E /* ZZTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTopicVoiceView.m; sourceTree = "<group>"; };
 		078519811CCF5FA600951E2E /* ZZTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZTopicVoiceView.xib; sourceTree = "<group>"; };
+		07856AFD1CD8973100D0AA50 /* ZZCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCommentViewController.h; sourceTree = "<group>"; };
+		07856AFE1CD8973100D0AA50 /* ZZCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCommentViewController.m; sourceTree = "<group>"; };
+		07856AFF1CD8973100D0AA50 /* ZZCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZCommentViewController.xib; sourceTree = "<group>"; };
 		0797311E1CA28970000940CF /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		079731221CA28970000940CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		079731241CA28970000940CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -291,6 +302,9 @@
 				0799B61A1CAA794100D7CE9E /* ZZShowPictureController.h */,
 				0799B61B1CAA794100D7CE9E /* ZZShowPictureController.m */,
 				0799B61C1CAA794100D7CE9E /* ZZShowPictureController.xib */,
+				07856AFD1CD8973100D0AA50 /* ZZCommentViewController.h */,
+				07856AFE1CD8973100D0AA50 /* ZZCommentViewController.m */,
+				07856AFF1CD8973100D0AA50 /* ZZCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -302,6 +316,10 @@
 				0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */,
 				0769C7A11CA8FA5800D2882A /* TopicModel.h */,
 				0769C7A21CA8FA5800D2882A /* TopicModel.m */,
+				0773FF591CD09E0A006AA300 /* UserModel.h */,
+				0773FF5A1CD09E0A006AA300 /* UserModel.m */,
+				0773FF5C1CD09F03006AA300 /* CommentModel.h */,
+				0773FF5D1CD09F03006AA300 /* CommentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -657,6 +675,7 @@
 				0769C7AB1CA9066700D2882A /* TopicCell.xib in Resources */,
 				0797312E1CA28970000940CF /* Assets.xcassets in Resources */,
 				07AE259A1CA3DC7800452BE7 /* ZZRecommendViewController.xib in Resources */,
+				07856B011CD8973100D0AA50 /* ZZCommentViewController.xib in Resources */,
 				07AE25911CA3DA7B00452BE7 /* RecommendLeftCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,13 +749,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07856B001CD8973100D0AA50 /* ZZCommentViewController.m in Sources */,
 				077B92881CA3C72E008767C3 /* ZZTabBar.m in Sources */,
 				0769C7941CA8D03A00D2882A /* ZZAllTableViewController.m in Sources */,
 				0720E2F71CA52BAE00ACD947 /* ZZVerticalButton.m in Sources */,
 				0799B6211CAA7A6200D7CE9E /* ZZProgressView.m in Sources */,
 				077B928E1CA3C8B8008767C3 /* ZZMainNavgationController.m in Sources */,
 				07AE25A71CA3F23200452BE7 /* RecommendUserModel.m in Sources */,
+				0773FF5B1CD09E0A006AA300 /* UserModel.m in Sources */,
 				0769C7A01CA8D08D00D2882A /* ZZWordTableViewController.m in Sources */,
+				0773FF5E1CD09F03006AA300 /* CommentModel.m in Sources */,
 				077B92861CA3C72E008767C3 /* ZZFriendViewController.m in Sources */,
 				077B92891CA3C72E008767C3 /* UIBarButtonItem+ZZExtension.m in Sources */,
 				078519801CCF5F9B00951E2E /* ZZTopicVoiceView.m in Sources */,

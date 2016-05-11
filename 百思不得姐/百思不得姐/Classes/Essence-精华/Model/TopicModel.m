@@ -9,6 +9,9 @@
 #import "TopicModel.h"
 #import "NSDate+ZZDateExtension.h"
 #import <MJExtension.h>
+
+#import "UserModel.h"
+#import "CommentModel.h"
 @implementation TopicModel
 
 
@@ -22,6 +25,17 @@
              };
 }
 
+
++ (NSDictionary *)mj_objectClassInArray{
+
+    return @{
+             
+             @"top_cmt" : @"CommentModel"
+             
+             };
+
+
+}
 
 - (NSString *)create_time
 {
@@ -119,6 +133,21 @@
             _cellHeight += videoH + ZZTopicCellMargin;
             
             
+            
+        }
+        
+        CommentModel *commtnModel = [self.top_cmt firstObject];
+        
+        if (commtnModel) {
+            
+            
+            
+            NSString *content = [NSString stringWithFormat:@"%@ : %@",commtnModel.user.username,commtnModel.content];
+            
+            CGFloat textH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13]} context:nil].size.height;
+            
+            
+            _cellHeight += textH + 20;
             
         }
         

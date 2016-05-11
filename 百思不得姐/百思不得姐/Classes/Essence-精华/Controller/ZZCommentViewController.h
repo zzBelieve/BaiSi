@@ -1,20 +1,15 @@
 //
-//  TopicCell.h
+//  ZZCommentViewController.h
 //  百思不得姐
 //
-//  Created by ZZBelieve on 16/3/28.
+//  Created by ZZBelieve on 16/5/3.
 //  Copyright © 2016年 ZZBelieve. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "TopicModel.h"
+@interface ZZCommentViewController : UIViewController
 
-
-@class TopicModel;
-
-@interface TopicCell : UITableViewCell
-
-+ (instancetype)cell;
 
 @property(nonatomic,strong)TopicModel *model;
-
 @end

@@ -32,3 +32,8 @@ UIKIT_EXTERN CGFloat const ZZTopicBottomHeight;
 UIKIT_EXTERN CGFloat const ZZTopicCellPictureViewMaxH;
 
 UIKIT_EXTERN CGFloat const ZZTopicCellPictureViewBreakH;
+
+
+/** 用户性别属性 */
+UIKIT_EXTERN NSString *const ZZUserSexMale;
+UIKIT_EXTERN NSString *const ZZUserSexFemale;

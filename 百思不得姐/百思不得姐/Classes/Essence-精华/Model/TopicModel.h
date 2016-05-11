@@ -36,6 +36,10 @@
 @property(nonatomic,assign,getter=is_sinav)BOOL sina_v;
 
 
+/** 最热评论 */
+@property(nonatomic,strong)NSArray *top_cmt;
+
+
 /** 图片的宽度 */
 @property (nonatomic, assign)CGFloat width;
 /** 图片的高度 */

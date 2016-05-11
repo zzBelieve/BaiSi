@@ -8,6 +8,8 @@
 
 #import "TopicCell.h"
 #import "TopicModel.h"
+#import "CommentModel.h"
+#import "UserModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "NSDate+ZZDateExtension.h"
 #import "ZZTopicPictureView.h"
@@ -35,10 +37,21 @@
 @property(nonatomic,weak)ZZTopicVoiceView *voiceView;
 
 @property(nonatomic,weak)ZZTopicVideoView *videoView;
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
+@property (weak, nonatomic) IBOutlet UILabel *top_cmtLable;
 @end
 
 @implementation TopicCell
 
+
++ (instancetype)cell{
+
+
+
+  return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+
+
+}
 
 - (ZZTopicPictureView *)pictureView{
 
@@ -169,6 +182,20 @@
         self.voiceView.hidden = YES;
         self.videoView.hidden = YES;
         
+    }
+    
+    //处理最热评论
+    
+    CommentModel *commtnModel = [model.top_cmt firstObject];
+    
+    if (commtnModel) {
+        
+        self.topCmtView.hidden = NO;
+        self.top_cmtLable.text = [NSString stringWithFormat:@"%@ : %@",commtnModel.user.username,commtnModel.content];
+    }else{
+    
+      self.topCmtView.hidden = YES;
+    
     }
     
     

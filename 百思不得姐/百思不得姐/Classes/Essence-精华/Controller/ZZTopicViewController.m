@@ -13,6 +13,7 @@
 #import "TopicModel.h"
 #import "TopicCell.h"
 #import "ZZConst.h"
+#import "ZZCommentViewController.h"
 @interface ZZTopicViewController ()
 
 
@@ -252,6 +253,17 @@ static NSString *const kcellid = @"topic";
     return model.cellHeight;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    TopicModel *model = self.dataArray[indexPath.row];
+    ZZCommentViewController *vc = [[ZZCommentViewController alloc] init];
+    vc.model = model;
+    [self.navigationController pushViewController:vc animated:YES];
+
+
+}
 /*
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
