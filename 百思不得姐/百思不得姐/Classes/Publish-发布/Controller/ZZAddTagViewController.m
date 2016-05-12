@@ -9,6 +9,7 @@
 #import "ZZAddTagViewController.h"
 #import "ZZTagButton.h"
 #import "ZZTagTextField.h"
+#import <SVProgressHUD.h>
 @interface ZZAddTagViewController ()<UITextFieldDelegate>
 
 /** 容器 */
@@ -83,8 +84,26 @@
     [self addTextField];
     
     
+    [self setUpTags];
+    
+    
 }
 
+- (void)setUpTags{
+
+   
+    for (NSString *tagStr in self.tagsArray) {
+    
+        self.textField.text = tagStr;
+        
+        [self addButtonClick];
+        
+    }
+  
+
+    
+
+}
 
 - (void)creatNav{
     
@@ -102,6 +121,13 @@
 
 
 - (void)addButtonClick{
+    
+    if (self.tagButtonArray.count==5) {
+        
+        [SVProgressHUD showErrorWithStatus:@"最多添加2个标签"];
+        
+        return;
+    }
 
 //    UIButton *tagButton = [[UIButton alloc] init];
      ZZTagButton *tagButton = [ZZTagButton buttonWithType:UIButtonTypeCustom];
@@ -321,6 +347,25 @@
 
 - (void)rightButtonClick{
 
+    
+    
+//    NSMutableArray *tagArray = [NSMutableArray array];
+//    
+//    for (ZZTagButton *button in self.tagButtonArray) {
+//        
+//        
+//        [tagArray addObject:button.currentTitle];
+//    }
+    
+    //kvc
+    
+    NSArray *tagArray = [self.tagButtonArray valueForKeyPath:@"currentTitle"];
+    
+    !self.tagsBlock ? : self.tagsBlock(tagArray);
+    
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 

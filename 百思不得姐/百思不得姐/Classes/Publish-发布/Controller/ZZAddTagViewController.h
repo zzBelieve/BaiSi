@@ -10,4 +10,11 @@
 
 @interface ZZAddTagViewController : UIViewController
 
+
+
+@property(nonatomic,copy)void (^tagsBlock)(NSArray *tags);
+
+
+
+@property(nonatomic,strong)NSArray *tagsArray;
 @end
