@@ -8,13 +8,14 @@
 
 #import "ZZAddTagViewController.h"
 #import "ZZTagButton.h"
-@interface ZZAddTagViewController ()
+#import "ZZTagTextField.h"
+@interface ZZAddTagViewController ()<UITextFieldDelegate>
 
 /** 容器 */
 @property (nonatomic, weak)UIView *containerView;
 
 /** textField */
-@property (nonatomic, weak)UITextField *textField;
+@property (nonatomic, weak)ZZTagTextField *textField;
 
 /** addButton */
 @property (nonatomic, weak)UIButton *addButton;
@@ -25,6 +26,8 @@
 
 @implementation ZZAddTagViewController
 
+
+#pragma mark - lazy
 - (NSMutableArray *)tagButtonArray{
 
     if (!_tagButtonArray) {
@@ -64,6 +67,40 @@
 
 }
 
+
+#pragma mark - View lifeCycle
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    
+    
+    
+    [self creatNav];
+    
+    [self addContainerVew];
+    
+    [self addTextField];
+    
+    
+}
+
+
+- (void)creatNav{
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    self.navigationItem.title = @"添加标签";
+    
+    
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClick)];
+    
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+}
+
+
 - (void)addButtonClick{
 
 //    UIButton *tagButton = [[UIButton alloc] init];
@@ -85,7 +122,7 @@
     
     
     
-    [self updateFrame];
+    [self updateTagButtonFrame];
 
 }
 - (void)tagButtonClick:(UIButton *)button{
@@ -97,13 +134,17 @@
     [UIView animateWithDuration:0.25 animations:^{
         
         
-         [self updateFrame];
+         [self updateTagButtonFrame];
+        
+        [self updateTextFieldFrame];
     }];
    
    
 
 }
-- (void)updateFrame{
+
+#pragma mark - 更新标签按钮布局
+- (void)updateTagButtonFrame{
 
 
     for (int i = 0; i<self.tagButtonArray.count; i++) {
@@ -151,6 +192,19 @@
     }
     
     
+  
+    [self updateTextFieldFrame];
+//
+//    self.textField.zz_X  =0;
+//    self.textField.zz_Y = CGRectGetMaxY([[self.tagButtonArray lastObject] frame]) + ZZTagMargin;
+
+
+}
+
+#pragma mark - 更新TextFieldFrame
+- (void)updateTextFieldFrame{
+
+
     ZZTagButton *lastButton = [self.tagButtonArray lastObject];
     
     CGFloat leftWidth = CGRectGetMaxX(lastButton.frame) + ZZTagMargin;
@@ -161,37 +215,20 @@
         self.textField.zz_Y = lastButton.zz_Y;
         
     }else{
-    
+        
         self.textField.zz_X = 0;
         self.textField.zz_Y =CGRectGetMaxY(lastButton.frame)+ZZTagMargin;
-    
-    
+        
+        
     }
-//
-//    self.textField.zz_X  =0;
-//    self.textField.zz_Y = CGRectGetMaxY([[self.tagButtonArray lastObject] frame]) + ZZTagMargin;
 
 
-}
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-   
-    
-    
-    [self creatNav];
-    
-    [self addContainerVew];
-    [self addTextField];
-    
-    
 }
 
 - (void)addContainerVew{
 
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(ZZTagMargin, 74, ZZScreenWidth - 2*ZZTagMargin, ZZScreenHeight)];
-    view.backgroundColor = [UIColor redColor];
+//    view.backgroundColor = [UIColor redColor];
     self.containerView = view;
     [self.view addSubview:view];
 
@@ -206,9 +243,22 @@
 
 - (void)addTextField{
 
-    UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, ZZScreenWidth, 25)];
+    
+    __weak typeof(self)weakSelf = self;
+    
+    ZZTagTextField *field = [[ZZTagTextField alloc] initWithFrame:CGRectMake(0, 0, ZZScreenWidth, 25)];
     field.placeholder = @"多个标签用逗号或者换行添加";
+    field.zz_Height = 20;
+    field.delegate = self;
     [field addTarget:self action:@selector(TextFieldTextDidChange) forControlEvents:UIControlEventEditingChanged];
+    
+    field.deleteBlock = ^{
+    
+    
+        [weakSelf tagButtonClick:[weakSelf.tagButtonArray lastObject]];
+    
+    };
+    
     [self.containerView addSubview:field];
     
     self.textField = field;
@@ -216,6 +266,8 @@
 }
 - (void)TextFieldTextDidChange{
     
+    [self updateTextFieldFrame];
+
     
     
     if (self.textField.hasText) {
@@ -227,6 +279,25 @@
         NSString *str = [NSString stringWithFormat:@"添加标签%@",self.textField.text];
         [self.addButton setTitle:str forState:UIControlStateNormal];
         
+        
+        
+        //获取最后一个字符
+        
+        NSString *textFieldText = self.textField.text;
+        NSUInteger length = self.textField.text.length;
+        
+       NSString *lastStr = [textFieldText substringFromIndex:length-1];
+        
+        if (([lastStr isEqualToString:@","] || [lastStr isEqualToString:@"，"]) && (length>1)) {
+            
+            
+            //去除逗号
+            
+            self.textField.text = [textFieldText substringToIndex:length-1];
+            
+            [self addButtonClick];
+        }
+        
     }else{
     
       self.addButton.hidden = YES;
@@ -234,20 +305,6 @@
     }
     
     
-    [self updateFrame];
-}
-- (void)creatNav{
-
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    self.navigationItem.title = @"添加标签";
-    
-    
-
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClick)];
-
-    self.navigationItem.rightBarButtonItem = rightButton;
-
 }
 
 - (CGFloat)textFieldTextWidth{
@@ -262,12 +319,28 @@
 }
 
 
-
-
-
-
 - (void)rightButtonClick{
 
+
+}
+
+
+#pragma mark - UITextFieldDelegate (处理换行)
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+
+    
+    
+    if (textField.hasText) {
+        
+        
+        [self addButtonClick];
+    }
+    
+    
+    
+
+
+    return YES;
 
 }
 - (void)didReceiveMemoryWarning {

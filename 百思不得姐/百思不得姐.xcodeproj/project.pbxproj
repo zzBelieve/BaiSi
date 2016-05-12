@@ -15,6 +15,7 @@
 		071243331CE316BD00652027 /* ZZSqaureButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243321CE316BD00652027 /* ZZSqaureButton.m */; };
 		0712433A1CE31C4000652027 /* ZZPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071243391CE31C4000652027 /* ZZPostWordViewController.m */; };
 		0712433D1CE33E2800652027 /* ZZPlaceHolderTextview.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712433C1CE33E2800652027 /* ZZPlaceHolderTextview.m */; };
+		0715567B1CE4238000663C9D /* ZZTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0715567A1CE4238000663C9D /* ZZTagTextField.m */; };
 		0720E2E71CA4EBB500ACD947 /* ZZRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */; };
 		0720E2EA1CA4ED0200ACD947 /* RecommedTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2E91CA4ED0200ACD947 /* RecommedTagsModel.m */; };
 		0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0720E2EC1CA4EDB900ACD947 /* ZZRecommandTagCell.m */; };
@@ -115,6 +116,8 @@
 		071243391CE31C4000652027 /* ZZPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPostWordViewController.m; sourceTree = "<group>"; };
 		0712433B1CE33E2800652027 /* ZZPlaceHolderTextview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPlaceHolderTextview.h; sourceTree = "<group>"; };
 		0712433C1CE33E2800652027 /* ZZPlaceHolderTextview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPlaceHolderTextview.m; sourceTree = "<group>"; };
+		071556791CE4238000663C9D /* ZZTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZTagTextField.h; sourceTree = "<group>"; };
+		0715567A1CE4238000663C9D /* ZZTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZTagTextField.m; sourceTree = "<group>"; };
 		0720E2E51CA4EBB500ACD947 /* ZZRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRecommendTagsViewController.h; sourceTree = "<group>"; };
 		0720E2E61CA4EBB500ACD947 /* ZZRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRecommendTagsViewController.m; sourceTree = "<group>"; };
 		0720E2E81CA4ED0200ACD947 /* RecommedTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommedTagsModel.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				BD57BAD21CE364FA00B70999 /* ZZaddTagToolView.xib */,
 				BD57BAD71CE37F9400B70999 /* ZZTagButton.h */,
 				BD57BAD81CE37F9400B70999 /* ZZTagButton.m */,
+				071556791CE4238000663C9D /* ZZTagTextField.h */,
+				0715567A1CE4238000663C9D /* ZZTagTextField.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -872,6 +877,7 @@
 				077B92871CA3C72E008767C3 /* ZZNewViewController.m in Sources */,
 				0799B6171CAA662000D7CE9E /* ZZTopicPictureView.m in Sources */,
 				0769C7A31CA8FA5800D2882A /* TopicModel.m in Sources */,
+				0715567B1CE4238000663C9D /* ZZTagTextField.m in Sources */,
 				0720E2EE1CA4EDB900ACD947 /* ZZRecommandTagCell.m in Sources */,
 				07AE25A31CA3EEA300452BE7 /* RecommendUserCell.m in Sources */,
 				071243301CE315FC00652027 /* ZZMeModel.m in Sources */,
